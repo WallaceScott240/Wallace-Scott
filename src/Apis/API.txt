@@ -1,0 +1,233 @@
+<header>
+  <!-- Intro settings -->
+  <style>
+    /* Default height for small devices */
+    #intro-example {
+      height: 400px;
+    }
+
+    /* Height for devices larger than 992px */
+    @media (min-width: 992px) {
+      #intro-example {
+        height: 600px;
+      }
+    }
+  </style>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+        data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Background image -->
+  <div id="intro-example" class="p-5 text-center bg-image"
+    style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Learn Bootstrap 5 with MDB</h1>
+          <h5 class="mb-4">
+            Best & free guide of responsive web design
+          </h5>
+          <a class="btn btn-outline-light btn-lg m-2" href="https://www.youtube.com/watch?v=c9B4TPnak1A"
+            role="button" rel="nofollow" target="_blank">Start tutorial</a>
+          <a class="btn btn-outline-light btn-lg m-2" href="https://mdbootstrap.com/docs/standard/"
+            target="_blank" role="button">Download MDB UI KIT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Background image -->
+</header>
+
+
+<div style={BodyStyle}>
+        <div className="jumbotron">
+          <h1 className="display-4">Hello, world!</h1>
+          <p className="lead">
+            This is a simple hero unit, a simple jumbotron-style component for
+            calling extra attention to featured content or information.
+          </p>
+          <p>
+            It uses utility classes for typography and spacing to space content
+            out within the larger container.
+          </p>
+          <p className="lead">
+            <a className="btn btn-primary btn-lg" href="#" role="button">
+              Learn more
+            </a>
+          </p>
+          <div style={SizedBox}></div>
+        </div>
+        <FillExample></FillExample>
+        <div style={{}}>
+          <Row>
+            <div style={SizedBox}></div>
+            <h1>My Current Spotify Favorites.</h1>
+            <br />
+            <Col>
+              <Card>
+                <Card.Body>
+                  <SpotifyEmbed></SpotifyEmbed>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card>
+                <Card.Body>
+                  <SpotifyEmbed2></SpotifyEmbed2>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col>
+              <Card>
+                <Card.Body>
+                  <SpotifyEmbed3></SpotifyEmbed3>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </div>
+      </div>
+
+
+
+
+
+import React, { useState, useEffect } from "react";
+
+const ImageCard = ({ photo, onClick }) => (
+  <div
+    style={{
+      borderRadius: "8px",
+      overflow: "hidden",
+      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+      transition: "transform 0.3s",
+      cursor: "pointer",
+    }}
+    onClick={() => onClick(photo)}
+  >
+    <img
+      src={photo.src.medium}
+      alt={photo.photographer}
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        borderRadius: "8px",
+      }}
+    />
+  </div>
+);
+
+const PexelsGallery = () => {
+  // Existing code...
+
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (photo) => {
+    setSelectedPhoto(photo);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedPhoto(null);
+    setIsModalOpen(false);
+  };
+
+  // Existing code...
+
+  return (
+    <div>
+      {/* Existing code... */}
+
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+          gap: "20px",
+        }}
+      >
+        {photos.map((photo) => (
+          <ImageCard key={photo.id} photo={photo} onClick={openModal} />
+        ))}
+      </div>
+
+      {isModalOpen && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            background: "rgba(0, 0, 0, 0.5)",
+            zIndex: 1000,
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "#fff",
+              borderRadius: "8px",
+              padding: "20px",
+              maxWidth: "80%",
+              maxHeight: "80%",
+              overflow: "auto",
+            }}
+          >
+            <img
+              src={selectedPhoto?.src.medium}
+              alt={selectedPhoto?.photographer}
+              style={{ width: "100%", borderRadius: "8px" }}
+            />
+            <button
+              style={{
+                marginTop: "10px",
+                padding: "10px",
+                background: "#3498db",
+                color: "#fff",
+                border: "none",
+                borderRadius: "5px",
+                cursor: "pointer",
+              }}
+              onClick={closeModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Existing code... */}
+    </div>
+  );
+};
+
+export default PexelsGallery;
