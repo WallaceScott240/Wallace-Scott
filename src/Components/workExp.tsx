@@ -4,7 +4,7 @@ function WorkExperience() {
   const handleCardHover = (e: {
     currentTarget: { style: { transform: string } };
   }) => {
-    e.currentTarget.style.transform = "scale(1.05)";
+    e.currentTarget.style.transform = "scale(1.01)";
   };
 
   const handleCardHoverOut = (e: {
@@ -25,7 +25,7 @@ function WorkExperience() {
   };
 
   const textStyle = {
-    color: "white",
+    color: "#122932",
   };
 
   const generateContent = () => {
@@ -57,8 +57,9 @@ function WorkExperience() {
       <Col md={6} className="mb-4" key={index}>
         <div
           style={{
-            backgroundColor: "#1e293b",
-            boxShadow: "1px 1px 5px 0px rgba(0,0,0,0.1)",
+            backgroundColor: "#F4F4F8",
+            boxShadow: "2px 0px 1px -1px rgba(239, 45, 86,1)",
+
             borderRadius: "10px",
             padding: "30px",
             transition: "transform 0.1s ease-in-out",
@@ -77,7 +78,7 @@ function WorkExperience() {
               {experience.tags.map((tag, tagIndex) => (
                 <Button
                   key={tagIndex}
-                  variant="outline-info"
+                  variant="outline-danger"
                   style={{
                     borderRadius: 50,
                     width: "auto",

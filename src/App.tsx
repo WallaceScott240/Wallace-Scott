@@ -3,6 +3,7 @@ import Data6 from "./Components/Axios6";
 import PexelsGallery2 from "./Components/Pagination2";
 import Navigation from "./Components/Navigation";
 import Landing from "./LandingPage";
+import HeroSection from "./Components/heroSection";
 
 const client = new QueryClient();
 
@@ -13,7 +14,7 @@ function App() {
         <Navigation></Navigation>
       </header>
       <body>
-        <Landing></Landing>
+        <HeroSection></HeroSection>
       </body>
     </html>
   );

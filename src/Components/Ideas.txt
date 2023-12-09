@@ -1,0 +1,86 @@
+// CounterContext.js
+import React, { createContext, useReducer, useContext } from 'react';
+
+const CounterContext = createContext();
+
+const initialState = { count: 0 };
+
+const counterReducer = (state, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return { count: state.count + 1 };
+    case 'DECREMENT':
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+};
+
+const CounterProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(counterReducer, initialState);
+
+  return (
+    <CounterContext.Provider value={{ state, dispatch }}>
+      {children}
+    </CounterContext.Provider>
+  );
+};
+
+const useCounter = () => {
+  const context = useContext(CounterContext);
+  if (!context) {
+    throw new Error('useCounter must be used within a CounterProvider');
+  }
+  return context;
+};
+
+export { CounterProvider, useCounter };
+
+
+// Counter.js
+import React from 'react';
+import { useCounter } from './CounterContext';
+
+const Counter = () => {
+  const { state, dispatch } = useCounter();
+
+  const increment = () => {
+    dispatch({ type: 'INCREMENT' });
+  };
+
+  const decrement = () => {
+    dispatch({ type: 'DECREMENT' });
+  };
+
+  return (
+    <div>
+      <p>Count: {state.count}</p>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+    </div>
+  );
+};
+
+export default Counter;
+
+
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Counter from './Counter';
+import { CounterProvider } from './CounterContext';
+
+const App = () => {
+  return (
+    <CounterProvider>
+      <Router>
+        <Switch>
+          <Route path="/page1" component={Counter} />
+          <Route path="/page2" component={Counter} />
+        </Switch>
+      </Router>
+    </CounterProvider>
+  );
+};
+
+export default App;

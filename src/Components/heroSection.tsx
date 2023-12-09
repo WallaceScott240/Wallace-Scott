@@ -41,7 +41,7 @@ function HeroSection() {
       align-items: center;
       justify-content: center;
       background-color: #white;
-      color: white;
+      color: black;
       position: relative;
       overflow: hidden;
     }
@@ -104,7 +104,7 @@ function HeroSection() {
   return (
     <>
       <style>{heroStyles}</style>
-      <section className="hero-section">
+      <section className="hero-section" >
         <div className="animated-background" />
         <Container>
           <Row className="justify-content-center">

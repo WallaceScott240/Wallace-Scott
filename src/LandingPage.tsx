@@ -1,14 +1,6 @@
 import { Col, Container, Row, Carousel, Button } from "react-bootstrap";
 import mountains from "./Components/images/Mountains.jpg";
-import html from "./Components/images/html.png";
-import flutter from "./Components/images/flutter.png";
-import react from "./Components/images/react.png";
-import css from "./Components/images/css.png";
-import javascript from "./Components/images/javascript.png";
-import firebase from "./Components/images/firebase.png";
-import UIUX from "./Components/images/UI/UX.png";
-import figma from "./Components/images/figma.png";
-import tredimg from "./Components/images/3Dart.png";
+
 import PexelsGallery from "./Components/Pagination";
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
@@ -26,7 +18,7 @@ const slow = { mass: 10, tension: 200, friction: 50 };
 const trans = (x: any, y: any) =>
   `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`;
 
-function Landing() {
+function Home() {
   const [{ pos1 }, set] = useSpring(() => ({ pos1: [0, 0], config: fast }));
   const [{ pos2 }] = useSpring(() => ({ pos2: pos1, config: slow }));
   const [{ pos3 }] = useSpring(() => ({ pos3: pos2, config: slow }));
@@ -67,34 +59,6 @@ function Landing() {
     padding: "100px",
     boxShadow: "0px 0px 25px -5px rgba(255,255,255,0.20)",
   };
-  const skillsStyle = {
-    backgroundColor: "white",
-    borderRadius: "0px",
-    color: "black",
-    padding: "50px",
-    margin: "20px 0",
-  };
-
-  const iconStyle = {
-    fontSize: "3rem",
-    margin: "10px",
-    width: "50px",
-    height: "50px",
-    color: "#007BFF",
-  };
-
-  const skillsData = [
-    { name: "HTML", icon: html },
-    { name: "CSS", icon: css },
-    { name: "JavaScript", icon: javascript },
-    { name: "React", icon: react },
-    { name: "Flutter", icon: flutter },
-    { name: "FireBase", icon: firebase },
-    { name: "Figma", icon: figma },
-    { name: "3D Ilustrations", icon: tredimg },
-    { name: "UI / UX", icon: UIUX },
-    // Add more skills as needed
-  ];
 
   const CarouselStyle = {
     backgroundColor: "#F8F9FA",
@@ -130,7 +94,8 @@ function Landing() {
     marginBottom: "80px",
   };
 
-  const resumeUrl = "https://technocoresolutions.godaddysites.com/portfolio";
+  const resumeUrl =
+    "https://img1.wsimg.com/blobby/go/c2d42004-8296-4a70-9aaa-ea7e3f01228f/Cv.pdf";
 
   const downloadResume = () => {
     // You can implement the logic to trigger the download here
@@ -140,24 +105,6 @@ function Landing() {
 
   return (
     <div style={{ backgroundColor: "#fff" }}>
-      <div>
-        {" "}
-        <HeroSection></HeroSection>
-        <About></About>
-      </div>
-
-      <div style={skillsStyle}>
-        <Container>
-          <Row className="text-center">
-            {skillsData.map((skill, index) => (
-              <Col xs={6} md={4} key={index}>
-                <img src={skill.icon} alt={skill.name} style={iconStyle} />
-                <p>{skill.name}</p>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </div>
       <div style={SizedBox2}></div>
 
       <WorkExperience></WorkExperience>
@@ -263,6 +210,6 @@ function Landing() {
     </div>
   );
 }
-ReactDOM.render(<Landing />, document.getElementById("root"));
+ReactDOM.render(<Home />, document.getElementById("root"));
 
-export default Landing;
+export default Home;
