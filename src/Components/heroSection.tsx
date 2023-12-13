@@ -109,7 +109,7 @@ function HeroSection() {
         <Container>
           <Row className="justify-content-center">
             <Col xs={12} md={8} style={contentStyle}>
-              <h1 className="text-center" style={{color:"black",}}>Wallace Scott.</h1>
+              <h1 className="text-center display-1" style={{color:"#EF2D56",}}>Wallace Scott.</h1>
               <p
                 className="text-center"
                 style={{

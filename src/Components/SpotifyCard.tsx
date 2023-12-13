@@ -2,7 +2,7 @@ import React from "react";
 
 const SpotifyEmbed = () => {
   const embedCode =
-    "https://open.spotify.com/embed/track/6Z8R6UsFuGXGtiIxiD8ISb?utm_source=generator"; // Replace with your Spotify embed code
+    "https://open.spotify.com/embed/playlist/0NwJFESUw55gLFQI6c17j0?utm_source=generator"; // Replace with your Spotify embed code
 
   return (
     <div style={{ maxWidth: "300px", margin: "auto", borderRadius: "12px" }}>

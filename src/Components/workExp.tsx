@@ -51,18 +51,25 @@ function WorkExperience() {
           "In my SS Tech front-end journey, I've thrived in a dynamic environment, enhancing my UI development skills. Proficient in Figma design and React, I seamlessly translate creative concepts into practical solutions. Collaborating within a forward-thinking team has deepened my appreciation for the synergy between design and development.",
         tags: ["React", "Figma", "Front-end", "UI/UX Design"],
       },
+      {
+        title: "No-Code Web Dev",
+        company: "Remote",
+        description:
+        "I specialize in crafting captivating websites without the need for coding, leveraging the user-friendly platforms of Wix and WordPress. Whether through Wix's versatile features or WordPress's customizable themes, I bring concepts to life in the online realm, making web design accessible and enjoyable.",  
+        tags: ["Wordpress", "Wix","Webflow", "No-Code", "Design"],
+      },
     ];
 
     return content.map((experience, index) => (
       <Col md={6} className="mb-4" key={index}>
         <div
           style={{
-            backgroundColor: "#F4F4F8",
-            boxShadow: "2px 0px 1px -1px rgba(239, 45, 86,1)",
+            backgroundColor: "white",
+            boxShadow: "0px 0px 1.5px 0px #ffb5c3",
 
             borderRadius: "10px",
             padding: "30px",
-            transition: "transform 0.1s ease-in-out",
+            transition: "transform 0.1s ease-out",
             height: "100%",
             display: "flex",
             flexDirection: "column",

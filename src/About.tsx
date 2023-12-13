@@ -19,10 +19,10 @@ function About() {
   };
   const aboutStyle = {
     backgroundColor: "#EF2D56",
-    borderRadius: "0px",
-    padding: "40px",
-    margin: "0px 0px",
-    // boxShadow: "0px 0px 25px -5px rgba(255,255,255,0.20)",
+    borderRadius: "5px",
+    padding: "30px",
+    margin: "15px",
+    boxShadow: "0px 0px 15px -1px #EF2D56",
     color: "white",
   };
 
@@ -87,6 +87,7 @@ function About() {
           </Row>
         </Container>
       </div>
+      
       <div>
         <WorkExperience></WorkExperience>
       </div>

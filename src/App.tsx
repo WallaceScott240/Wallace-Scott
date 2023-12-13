@@ -1,22 +1,26 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import Data6 from "./Components/Axios6";
-import PexelsGallery2 from "./Components/Pagination2";
 import Navigation from "./Components/Navigation";
-import Landing from "./LandingPage";
+import Landing from "./Home";
 import HeroSection from "./Components/heroSection";
+import Home from "./Home";
+import About from "./About";
+import RecentSongsSection from "./songscard";
 
 const client = new QueryClient();
 
 function App() {
   return (
-    <html>
-      <header>
-        <Navigation></Navigation>
-      </header>
-      <body>
+    <>
+      <div>
         <HeroSection></HeroSection>
-      </body>
-    </html>
+      </div>
+      <div>
+        <About></About>
+      </div>
+      <div>
+      <RecentSongsSection></RecentSongsSection>
+      </div>
+    </>
   );
 }
 

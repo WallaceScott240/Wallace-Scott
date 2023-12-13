@@ -2,7 +2,7 @@ import React from "react";
 
 const SpotifyEmbed3 = () => {
   const embedCode =
-    "https://open.spotify.com/embed/track/4vVTI94F9uJ8lHNDWKv0i2?utm_source=generator" 
+    "https://open.spotify.com/embed/playlist/5tnteuYEegnCsetyRGZ6Gv?utm_source=generator&theme=0";
     return (
     <div style={{ maxWidth: "300px", margin: "auto", borderRadius: "12px" }}>
       <iframe
