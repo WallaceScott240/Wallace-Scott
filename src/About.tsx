@@ -18,11 +18,11 @@ function About() {
     boxShadow: "0px 0px 25px -5px rgba(255,255,255,0.20)",
   };
   const aboutStyle = {
-    backgroundColor: "#EF2D56",
-    borderRadius: "5px",
+    backgroundColor: "#355E93",
+    // borderRadius: "5px",
     padding: "30px",
-    margin: "15px",
-    boxShadow: "0px 0px 15px -1px #EF2D56",
+    margin: "0px",
+    // boxShadow: "0px 0px 15px -1px #EF2D56",
     color: "white",
   };
 
@@ -61,10 +61,18 @@ function About() {
             <Col xs={12} md={8}>
               <h2 className="">About Me</h2>
               <p className="lead">
-                Hello! I'm Wallace Scott, a 21-year-old entrepreneur, author,
-                and software engineer based in Bangalore. Currently pursuing my
-                education at Jain University, I am passionate about leveraging
-                technology to solve real-world problems.
+                Greetings! I'm Wallace Scott, a dynamic 21-year-old
+                entrepreneur, author, and software engineer hailing from
+                Bangalore. Amidst my academic pursuits at Jain University, I
+                channel my passion for technology into tangible solutions for
+                real-world challenges. My journey unfolds at the intersection of
+                entrepreneurship, literature, and software engineering. Eager to
+                embrace new challenges, I invite you to accompany me on this
+                exciting odyssey, where I continuously explore diverse
+                opportunities. Together, let's delve into the realms of
+                innovation, learning, and growth, creating a narrative that
+                blends my multifaceted interests into a compelling story of
+                ambition and achievement.
               </p>
               <p className="lead">
                 Join me on this journey as I navigate the realms of
@@ -72,6 +80,7 @@ function About() {
                 constantly seeking new challenges and opportunities.
               </p>
             </Col>
+            
           </Row>
         </Container>
       </div>
@@ -87,7 +96,7 @@ function About() {
           </Row>
         </Container>
       </div>
-      
+
       <div>
         <WorkExperience></WorkExperience>
       </div>

@@ -1,6 +1,6 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 
-function WorkExperience() {
+function PastProjects() {
   const handleCardHover = (e: {
     currentTarget: { style: { transform: string } };
   }) => {
@@ -13,29 +13,17 @@ function WorkExperience() {
     e.currentTarget.style.transform = "scale(1)";
   };
 
-  const partnerCardStyle = {
-    backgroundColor: "white",
-    boxShadow: "1px 1px 5px 0px rgba(0,0,0,0.2)",
-    borderRadius: "10px",
-    padding: "25px",
-    transition: "transform 0.1s ease-in-out",
-    height: "100%",
-    display: "flex",
-    flexDirection: "column",
-  };
-
   const textStyle = {
-    color: "white",
+    color: "#122932",
   };
 
   const generateContent = () => {
     const content = [
       {
-        title: "Content Writer",
-        company: "DESS",
-        description:
-          "My first month at DESS as a content writer has been a rewarding journey. The supportive environment, diverse projects, and collaborative culture have enhanced my skills and passion for content creation. Grateful for the opportunities and excited about contributing to DESS's continued success. Looking forward to what the future holds.",
-        tags: ["Content Writing", "Advertising Ideas"],
+        title: "I R I S",
+        company: "____________",
+        description: "A personalized assistant designed to meet common questions",
+        tags: ["Flutter", "Dart", "Bot", "UI"],
       },
       {
         title: "Block Chain R&D",
@@ -51,24 +39,14 @@ function WorkExperience() {
           "In my SS Tech front-end journey, I've thrived in a dynamic environment, enhancing my UI development skills. Proficient in Figma design and React, I seamlessly translate creative concepts into practical solutions. Collaborating within a forward-thinking team has deepened my appreciation for the synergy between design and development.",
         tags: ["React", "Figma", "Front-end", "UI/UX Design"],
       },
-      {
-        title: "No-Code Web Dev",
-        company: "Remote",
-        description:
-          "I specialize in crafting captivating websites without the need for coding, leveraging the user-friendly platforms of Wix and WordPress. Whether through Wix's versatile features or WordPress's customizable themes, I bring concepts to life in the online realm, making web design accessible and enjoyable.",
-        tags: ["Wordpress", "Wix", "Webflow", "No-Code", "Design"],
-      },
     ];
 
     return content.map((experience, index) => (
-      <Col md={6} className="mb-4" key={index}>
-        
+      <Col md={12} className="mb-4" key={index}>
         <div
           style={{
-            backgroundColor: "#355E93",
-            boxShadow: "0px 0px 1.5px 0px #355E93",
-            
-
+            backgroundColor: "white",
+            boxShadow: "0px 0px 1.5px 0px #ffb5c3",
             borderRadius: "10px",
             padding: "30px",
             transition: "transform 0.1s ease-out",
@@ -87,12 +65,11 @@ function WorkExperience() {
               {experience.tags.map((tag, tagIndex) => (
                 <Button
                   key={tagIndex}
-                  variant="outline-warning"
+                  variant="outline-danger"
                   style={{
                     borderRadius: 50,
                     width: "auto",
                     fontSize: 10,
-                    color: 'white',
                     margin: 10,
                   }}
                 >
@@ -113,4 +90,4 @@ function WorkExperience() {
   );
 }
 
-export default WorkExperience;
+export default PastProjects;

@@ -40,7 +40,7 @@ function HeroSection() {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #white;
+      background-color: #ffffff;
       color: black;
       position: relative;
       overflow: hidden;
@@ -74,7 +74,7 @@ function HeroSection() {
       top: ${ballPosition.y}px;
       left: ${ballPosition.x}px;
       transition: top 2s ease, left 2s ease;
-      background: red;
+      background: blue;
       box-shadow:
         0 5px 15px rgba(255, 255, 255, 0.1),
         0 -5px 15px rgba(255, 255, 255, 0.1),
@@ -109,7 +109,7 @@ function HeroSection() {
         <Container>
           <Row className="justify-content-center">
             <Col xs={12} md={8} style={contentStyle}>
-              <h1 className="text-center display-1" style={{color:"#EF2D56",}}>Wallace Scott.</h1>
+              <h1 className="text-center display-1" style={{color:"#355E93",}}>Wallace Scott.</h1>
               <p
                 className="text-center"
                 style={{
