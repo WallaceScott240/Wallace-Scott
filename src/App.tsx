@@ -8,7 +8,6 @@ import RecentSongsSection from "./songscard";
 import ContactMeSection from "./Components/contact";
 import PastProjects from "./Components/Projects";
 import PastWork from "./Components/pastwork";
-import UniqueAnimationWidget from "./Toys/goo";
 
 const client = new QueryClient();
 
