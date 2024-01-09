@@ -22,34 +22,32 @@ const ContactMeSection = () => {
     >
       <Container>
         <h2>Contact Me</h2>
-        <p>
-          Feel free to reach out to me for any inquiries or just to say hi!
-        </p>
+        <p>Feel free to reach out to me for any inquiries or just to say hi!</p>
         <Row className="contact-details">
           <Col md={6} lg={6}>
             <p style={{ color: "#FFFFFF" }}>
-              <FaEnvelope /> Email: your.email@example.com
+              <FaEnvelope /> Email: wallacebusiness42@gmail.com
             </p>
             <p style={{ color: "#FFFFFF" }}>
               <FaTwitter /> Twitter:{" "}
               <a
-                href="https://twitter.com/yourtwitterhandle"
+                href="https://twitter.com/calmque"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "#FFFFFF" }}
               >
-                @yourtwitterhandle
+                @calmque
               </a>
             </p>
             <p style={{ color: "#FFFFFF" }}>
               <FaLinkedin /> LinkedIn:{" "}
               <a
-                href="https://linkedin.com/in/yourlinkedinprofile"
+                href="https://www.linkedin.com/in/wallace-dsouza-8b52121ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "#FFFFFF" }}
               >
-                linkedin.com/in/yourlinkedinprofile
+                Wallace Scott
               </a>
             </p>
           </Col>
