@@ -8,6 +8,8 @@ import RecentSongsSection from "./songscard";
 import ContactMeSection from "./Components/contact";
 import PastProjects from "./Components/Projects";
 import PastWork from "./Components/pastwork";
+import CTASection from "./Components/colaberation";
+import ServicesSection from "./Components/services";
 
 const client = new QueryClient();
 
@@ -17,7 +19,6 @@ function App() {
       <div>
         <HeroSection></HeroSection>
       </div>
-
       <div>
         <About></About>
       </div>
@@ -31,7 +32,14 @@ function App() {
       <div>
         <PastProjects></PastProjects>
       </div> */}
+      <div>
+        <CTASection></CTASection>
+      </div>
 
+      <div>
+        <ServicesSection></ServicesSection>
+      </div>
+      <div style={{ height: 20 }}></div>
       <div>
         <RecentSongsSection></RecentSongsSection>
       </div>

@@ -1,100 +1,44 @@
-
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import mountains from "./images/Mountains.jpg";
-import cool from "./images/coolwalk.png";
-import mushroom from "./images/musroom.jpg";
+import { Container, Button } from "react-bootstrap";
 
-const CollaborationSection = () => {
-  const sectionStyle = {
-    backgroundColor: "#031521",
-    padding: "50px 0",
+const CTASection = () => {
+  const gradientStyle = {
+    background: "linear-gradient(45deg, #355E93, #355E93)",
+    color: "white",
+    padding: "60px 20px",
+    margin: 0,
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
   };
 
-  const partnerCardStyle = {
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-    boxShadow: "0px 0px 25px -5px rgba(255,255,255,0.20)",
-    borderRadius: "10px",
-    padding: "20px",
-    transition: "transform 0.3s ease-in-out",
-    marginBottom: "20px",
+  const titleStyle = {
+    letterSpacing: "-2px",
+    // fontFamily: "'', cursive",
+    fontWeight: "700", // Adjust the font weight as needed
   };
 
-  const partnerImageStyle = {
-    maxWidth: "100%",
-    height: "250px",
-    borderRadius: "8px",
-    marginBottom: "20px",
-  };
-
-  const textStyle = {
-    color: "#ffffff",
-  };
-
-  const handleCardHover = (e: {
-    currentTarget: { style: { transform: string } };
-  }) => {
-    e.currentTarget.style.transform = "scale(1.05)";
-  };
-
-  const handleCardHoverOut = (e: {
-    currentTarget: { style: { transform: string } };
-  }) => {
-    e.currentTarget.style.transform = "scale(1)";
+  const handleContactClick = () => {
+    // Replace the phone number with your WhatsApp number
+    window.open("https://wa.me/919359119325");
   };
 
   return (
-    <div style={sectionStyle}>
-      <Container style={{ marginTop: 0, marginBottom: 0 }}>
-        <h2 className="text-center display-4" style={{color: "white"}}>Collaborate with Us</h2>
-        <br />
-        <Row>
-          <Col md={4} className="text-center mb-4">
-            <div
-              style={partnerCardStyle}
-              onMouseOver={handleCardHover}
-              onMouseOut={handleCardHoverOut}
-            >
-              <img src={mountains} alt="Partner 1" style={partnerImageStyle} />
-              <h4 style={textStyle}>Partner 1</h4>
-              <p style={textStyle}>
-                Description of collaboration and benefits.
-              </p>
-              <Button variant="outline-light">Learn More</Button>
-            </div>
-          </Col>
-          <Col md={4} className="text-center mb-4">
-            <div
-              style={partnerCardStyle}
-              onMouseOver={handleCardHover}
-              onMouseOut={handleCardHoverOut}
-            >
-              <img src={mushroom} alt="Partner 2" style={partnerImageStyle} />
-              <h4 style={textStyle}>Partner 2</h4>
-              <p style={textStyle}>
-                Description of collaboration and benefits.
-              </p>
-              <Button variant="outline-light">Learn More</Button>
-            </div>
-          </Col>
-          <Col md={4} className="text-center mb-4">
-            <div
-              style={partnerCardStyle}
-              onMouseOver={handleCardHover}
-              onMouseOut={handleCardHoverOut}
-            >
-              <img src={cool} alt="Partner 3" style={partnerImageStyle} />
-              <h4 style={textStyle}>Partner 3</h4>
-              <p style={textStyle}>
-                Description of collaboration and benefits.
-              </p>
-              <Button variant="outline-light">Learn More</Button>
-            </div>
-          </Col>
-        </Row>
+    <section style={gradientStyle} className="">
+      <Container>
+        <h2 className="display-1 mb-4" style={titleStyle}>
+          Ready to start your next project? Contact me for a consultation.
+        </h2>
+        <p className="lead mb-4">Join me now and enjoy an additional 5% off.</p>
+        <Button
+          variant="outline-warning"
+          size="lg"
+          style={{ color: "white" }}
+          onClick={handleContactClick}
+        >
+          Contact Me
+        </Button>
       </Container>
-    </div>
+    </section>
   );
 };
 
-export default CollaborationSection;
+export default CTASection;

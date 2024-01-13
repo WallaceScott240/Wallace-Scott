@@ -52,8 +52,8 @@ function HeroSection() {
       left: 0;
       width: 100%;
       height: 100%;
-      background: white;
-      opacity: 0.5;
+      background: whitesmoke;
+      opacity: 0;
       animation: backgroundAnimation 10s infinite linear;
     }
 

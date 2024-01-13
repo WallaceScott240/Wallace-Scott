@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import { FaEnvelope, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const ContactMeSection = () => {
   const handleOpenURL = () => {
@@ -48,6 +48,17 @@ const ContactMeSection = () => {
                 style={{ color: "#FFFFFF" }}
               >
                 Wallace Scott
+              </a>
+            </p>
+            <p style={{ color: "#FFFFFF" }}>
+              <FaInstagram /> Instagram:{" "}
+              <a
+                href="https://www.instagram.com/sc.walace?igsh=MWtyZHNrMnNwdXNzeg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#FFFFFF" }}
+              >
+                sc.walace
               </a>
             </p>
           </Col>
