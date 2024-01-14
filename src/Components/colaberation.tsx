@@ -12,13 +12,13 @@ const CTASection = () => {
 
   const titleStyle = {
     letterSpacing: "-2px",
-    // fontFamily: "'', cursive",
-    fontWeight: "700", // Adjust the font weight as needed
+    fontWeight: "700",
   };
 
   const handleContactClick = () => {
-    // Replace the phone number with your WhatsApp number
-    window.open("https://wa.me/919359119325");
+    // Replace with your email address
+    const email = "wallacebusiness42@gmail.com";
+    window.location.href = `mailto:${email}`;
   };
 
   return (

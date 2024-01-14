@@ -1,6 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaLaptop, FaMobileAlt, FaDatabase } from "react-icons/fa";
+import {
+  FaLaptop,
+  FaMobileAlt,
+  FaEllipsisH,
+  FaCog,
+  FaBullhorn,
+} from "react-icons/fa";
 
 const ServicesSection = () => {
   const sectionStyle = {
@@ -38,27 +44,28 @@ const ServicesSection = () => {
           <Col md={4} className="mb-4">
             <div style={serviceStyle}>
               <FaLaptop style={iconStyle} />
-              <h3 style={titleStyle}>Web Development</h3>
-              <p style={descriptionStyle}>
-                Building responsive and user-friendly web applications.
-              </p>
-            </div>
-          </Col>
-          <Col md={4} className="mb-4">
-            <div style={serviceStyle}>
               <FaMobileAlt style={iconStyle} />
-              <h3 style={titleStyle}>Mobile App Development</h3>
+              <h3 style={titleStyle}>Web/Mobile App Development</h3>
               <p style={descriptionStyle}>
-                Creating native and cross-platform mobile applications.
+                Building responsive and user-friendly web/mobile applications.
               </p>
             </div>
           </Col>
           <Col md={4} className="mb-4">
             <div style={serviceStyle}>
-              <FaDatabase style={iconStyle} />
-              <h3 style={titleStyle}>Database Management</h3>
+              <FaBullhorn style={iconStyle} />
+              <h3 style={titleStyle}>Digital Marketing</h3>
               <p style={descriptionStyle}>
-                Designing and optimizing databases for efficient performance.
+                Promote your brand with effective digital marketing strategies.
+              </p>
+            </div>
+          </Col>
+          <Col md={4} className="mb-4">
+            <div style={serviceStyle}>
+              <FaCog style={iconStyle} />
+              <h3 style={titleStyle}>More</h3>
+              <p style={descriptionStyle}>
+                Contact me for additional services and more options.
               </p>
             </div>
           </Col>
