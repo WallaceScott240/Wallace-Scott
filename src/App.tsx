@@ -10,6 +10,7 @@ import PastProjects from "./Components/Projects";
 import PastWork from "./Components/pastwork";
 import CTASection from "./Components/colaberation";
 import ServicesSection from "./Components/services";
+import InternshipCTASection from "./Internship";
 
 const client = new QueryClient();
 
@@ -42,6 +43,10 @@ function App() {
       <div style={{ height: 20 }}></div>
       <div>
         <RecentSongsSection></RecentSongsSection>
+      </div>
+      <div style={{ height: 20 }}></div>
+      <div>
+        <InternshipCTASection></InternshipCTASection>
       </div>
       <div style={{ height: 20 }}></div>
 
