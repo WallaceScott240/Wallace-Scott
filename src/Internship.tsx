@@ -27,7 +27,7 @@ const InternshipCTASection = () => {
 
   const handleContactClick = () => {
     // Replace with your email address
-    const email = "your-email@example.com";
+    const email = "wallacebusiness42@gmail.com";
     window.location.href = `mailto:${email}`;
   };
 
