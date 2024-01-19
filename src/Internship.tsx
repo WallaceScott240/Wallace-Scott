@@ -35,7 +35,7 @@ const InternshipCTASection = () => {
     <section style={gradientStyle} className="">
       <Container>
         <h2 className="display-1 mb-4" style={titleStyle}>
-          Ready to take your skills to the next level? Join our internship program.
+          Ready to take your skills to the next level? Join my internship program.
         </h2>
         <p className="lead mb-4">
           Explore the world of <span style={flutterStyle}>Flutter</span> and <span style={reactStyle}>React</span> with hands-on courses. Elevate your career with practical knowledge.
