@@ -11,6 +11,7 @@ import PastWork from "./Components/pastwork";
 import CTASection from "./Components/colaberation";
 import ServicesSection from "./Components/services";
 import InternshipCTASection from "./Internship";
+import ReviewSection from "./review";
 
 const client = new QueryClient();
 
@@ -48,7 +49,6 @@ function App() {
       <div>
         <InternshipCTASection></InternshipCTASection>
       </div>
-      <div style={{ height: 20 }}></div>
 
       <div>
         <ContactMeSection></ContactMeSection>

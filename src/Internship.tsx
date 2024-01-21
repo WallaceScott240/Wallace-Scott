@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
+import ReviewSection from "./review";
 
 const InternshipCTASection = () => {
   const gradientStyle = {
@@ -52,6 +53,7 @@ const InternshipCTASection = () => {
           Apply Now
         </Button>
       </Container>
+      <ReviewSection></ReviewSection>
     </section>
   );
 };
