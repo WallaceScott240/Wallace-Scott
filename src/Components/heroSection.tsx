@@ -118,7 +118,7 @@ function HeroSection() {
                   marginTop: "20px",
                 }}
               >
-                Entrepreneur | Software Engineer | Author
+              Entrepreneur | Software Engineer
               </p>
             </Col>
           </Row>

@@ -12,6 +12,7 @@ import CTASection from "./Components/colaberation";
 import ServicesSection from "./Components/services";
 import InternshipCTASection from "./Internship";
 import ReviewSection from "./review";
+import TradingSection from "./trading";
 
 const client = new QueryClient();
 
@@ -49,7 +50,6 @@ function App() {
       <div>
         <InternshipCTASection></InternshipCTASection>
       </div>
-
       <div>
         <ContactMeSection></ContactMeSection>
       </div>
