@@ -29,9 +29,9 @@ const ReviewSection = () => {
   return (
     <section className="py-5">
       <Container>
-        <Row>
+        <Row xs={1} md={2} lg={3}>
           {reviews.map((review, index) => (
-            <Col key={index} md={4} className="mb-4">
+            <Col key={index} className="mb-4">
               <Card
                 style={{
                   backgroundColor: "#355E93",

@@ -6,12 +6,15 @@ import SpotifyCard3 from "./Components/SpotifyCard3";
 
 const RecentSongsSection = () => {
   const aboutStyle = {
-    backgroundColor: "white",
+    backgroundColor: "whitesmoke",
     borderRadius: "0px",
-    padding: "0px",
-    margin: "20px",
     boxShadow: "0px 0px 1px -1px #EF2D56",
     color: "black",
+    padding: "60px 20px",
+  };
+
+  const headingStyle = {
+    marginBottom: "20px", // Adjust margin for the heading
   };
 
   return (
@@ -19,7 +22,9 @@ const RecentSongsSection = () => {
       <Container>
         <Row className="justify-content-center align-items-center">
           <Col xs={12} md={8}>
-            <h2 className="">In My Free Time...</h2>
+            <h1 className="lg" style={headingStyle}>
+              In My Free Time...
+            </h1>
             <p className="lead">
               In my free time, I immerse myself in the art of curating music
               playlists, a passion that allows me to craft sonic journeys. Three

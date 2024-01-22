@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import React, { useState, useEffect } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 
 interface BallPosition {
   x: number;
@@ -7,28 +7,30 @@ interface BallPosition {
 }
 
 function HeroSection() {
-  const [ballPosition, setBallPosition] = useState<BallPosition>({ x: 0, y: 0 });
+  const [ballPosition, setBallPosition] = useState<BallPosition>({
+    x: 0,
+    y: 0,
+  });
 
   const handleMouseMove = (e: { clientX: number; clientY: number }) => {
-    
     setBallPosition({
-      x: e.clientX - 5, 
+      x: e.clientX - 5,
       y: e.clientY - 5,
     });
   };
 
   useEffect(() => {
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
   const contentStyle = {
     // backgroundColor: "rgba(0, 0, 0, 0.0)",
     borderRadius: "10px",
-    color:"black",
-    
+    color: "black",
+
     padding: "50px",
     // boxShadow: "0px 0px 25px -5px rgba(255,255,255,0.20)",
   };
@@ -104,12 +106,19 @@ function HeroSection() {
   return (
     <>
       <style>{heroStyles}</style>
-      <section className="hero-section" >
+      <section className="hero-section">
         <div className="animated-background" />
         <Container>
           <Row className="justify-content-center">
             <Col xs={12} md={8} style={contentStyle}>
-              <h1 className="text-center display-1" style={{color:"#355E93",}}>Wallace Scott.</h1>
+              <h1
+                className="text-center display-1"
+                style={{ color: "#355E93" }}
+              >
+                Wallace Scott.
+              </h1>
+              <hr className="my-4" style={{ borderColor: "grey" }} />
+
               <p
                 className="text-center"
                 style={{

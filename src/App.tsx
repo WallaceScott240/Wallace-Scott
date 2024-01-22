@@ -13,6 +13,8 @@ import ServicesSection from "./Components/services";
 import InternshipCTASection from "./Internship";
 import ReviewSection from "./review";
 import TradingSection from "./trading";
+import Footer from "./footer";
+import InformativeFooter from "./footer";
 
 const client = new QueryClient();
 
@@ -42,17 +44,18 @@ function App() {
       <div>
         <ServicesSection></ServicesSection>
       </div>
-      <div style={{ height: 20 }}></div>
       <div>
         <RecentSongsSection></RecentSongsSection>
       </div>
-      <div style={{ height: 20 }}></div>
       <div>
         <InternshipCTASection></InternshipCTASection>
       </div>
+      <div style={{ height: 20 }}></div>
+
       <div>
         <ContactMeSection></ContactMeSection>
       </div>
+      
     </>
   );
 }
