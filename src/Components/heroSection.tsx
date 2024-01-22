@@ -98,7 +98,7 @@ function HeroSection() {
       }
 
       .animated-background {
-        opacity: 0.8;
+        opacity: 0;
       }
     }
   `;
@@ -112,7 +112,7 @@ function HeroSection() {
           <Row className="justify-content-center">
             <Col xs={12} md={8} style={contentStyle}>
               <h1
-                className="text-center display-1"
+                className=""
                 style={{ color: "#355E93" }}
               >
                 Wallace Scott.
@@ -120,7 +120,7 @@ function HeroSection() {
               <hr className="my-4" style={{ borderColor: "grey" }} />
 
               <p
-                className="text-center"
+                className=""
                 style={{
                   fontSize: "1.0rem",
                   marginBottom: "20px",
