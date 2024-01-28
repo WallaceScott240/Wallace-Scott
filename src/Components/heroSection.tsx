@@ -110,10 +110,7 @@ function HeroSection() {
         <Container>
           <Row className="justify-content-center">
             <Col xs={12} md={8} style={contentStyle}>
-              <h1
-                className=""
-                style={{ color: "#355E93" }}
-              >
+              <h1 className="" style={{ color: "#355E93" }}>
                 Wallace Scott.
               </h1>
               <hr className="my-4" style={{ borderColor: "grey" }} />
@@ -126,7 +123,7 @@ function HeroSection() {
                   marginTop: "20px",
                 }}
               >
-                Entrepreneur | Software Engineer | Author
+                Entrepreneur | Software Engineer
               </p>
             </Col>
           </Row>
