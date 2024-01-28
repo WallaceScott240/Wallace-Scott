@@ -30,7 +30,6 @@ function HeroSection() {
     // backgroundColor: "rgba(0, 0, 0, 0.0)",
     borderRadius: "10px",
     color: "black",
-
     padding: "50px",
     // boxShadow: "0px 0px 25px -5px rgba(255,255,255,0.20)",
   };
