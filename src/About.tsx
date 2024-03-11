@@ -61,7 +61,7 @@ function About() {
             <Col xs={12} md={8}>
               <h2 className="">About Me</h2>
               <p className="lead">
-                Greetings! I'm Wallace Scott, a dynamic 21-year-old
+                Greetings! I'm Wallace Scott, a dynamic 22-year-old
                 entrepreneur, author, and software engineer hailing from
                 Bangalore. Amidst my academic pursuits at Jain University, I
                 channel my passion for technology into tangible solutions for
