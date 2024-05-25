@@ -58,7 +58,7 @@ function About() {
       <div style={aboutStyle}>
         <Container>
           <Row className="justify-content-center align-items-center">
-            <Col xs={12} md={8}>
+            <Col xs={12} md={12}>
               <h2 className="">About Me</h2>
               <p className="lead">
                 Greetings! I'm Wallace Scott, a dynamic 22-year-old

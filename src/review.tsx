@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const ReviewSection = () => {
   const textStyle = {
@@ -29,23 +30,26 @@ const ReviewSection = () => {
   return (
     <section className="py-5">
       <Container>
-        <Row xs={1} md={2} lg={3}>
+        <Row xs={1} md={2} lg={3} className="g-4">
           {reviews.map((review, index) => (
-            <Col key={index} className="mb-4">
+            <Col key={index}>
               <Card
+                className="h-100"
                 style={{
                   backgroundColor: "#355E93",
                   boxShadow: "0px 0px 1.5px 0px #355E93",
                   borderRadius: "10px",
                   color: "white",
+                  display: "flex",
+                  flexDirection: "column",
                 }}
               >
-                <Card.Body>
+                <Card.Body className="d-flex flex-column">
                   <Card.Title>{review.name}</Card.Title>
-                  <Card.Subtitle className="mb-2 " style={{ color: "#FFC107" }}>
+                  <Card.Subtitle className="mb-2" style={{ color: "#FFC107" }}>
                     {review.course}
                   </Card.Subtitle>
-                  <Card.Text>{review.review}</Card.Text>
+                  <Card.Text className="flex-grow-1">{review.review}</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
