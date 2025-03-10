@@ -5,7 +5,7 @@ const HeroRSASection = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('/src/Components/images/Hero.png')",
+        backgroundImage: "url('/src/Components/images/Hero.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
