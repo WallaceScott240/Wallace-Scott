@@ -1,0 +1,140 @@
+import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
+
+const cards = [
+  {
+    number: "1",
+    title: "Expert Team",
+    description: "Comprising of PhDs, patent attorneys, and specialists with extensive experience in academia and industry",
+    color: "#F9F0BB",
+  },
+  {
+    number: "2",
+    title: "Global Reach",
+    description: "Ability to serve clients around the world with multilingual support and understanding of international publication and patent laws.",
+    color: "#F9F0BB",
+  },
+  {
+    number: "3",
+    title: "Technology Driven",
+    description: "Utilizing cutting-edge technology to streamline the publication and patent application processes, ensuring efficiency and cost-effectiveness.",
+    color: "#F9F0BB",
+  },
+  {
+    number: "4",
+    title: "Client-centric Approach",
+    description: "Customized services tailored to the specific needs and goals of each client, with a focus on building long-term relationships.",
+    color: "#F9F0BB",
+  },
+];
+
+const DNASection2 = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <section
+      style={{ background: "white", padding: "60px 0", textAlign: "center" }}
+    >
+      <Container>
+        <h2
+          style={{
+            fontSize: "2.5rem",
+            fontWeight: "bold",
+            marginBottom: "20px",
+            color: "black",
+          }}
+        >
+          Strategic Advantages @ RSA Labs
+        </h2>
+       
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: isMobile ? "column" : "row",
+            width: "100%",
+            height: isMobile ? "auto" : "200px",
+            cursor: "pointer",
+            borderRadius: "12px",
+            overflow: "hidden",
+            justifyContent: "center",
+          }}
+        >
+          {cards.map((item, index) => (
+            <div
+              key={index}
+              onMouseEnter={() => setActiveIndex(index)}
+              onMouseLeave={() => setActiveIndex(null)}
+              style={{
+                flex: isMobile ? "none" : activeIndex === index ? 3 : 1,
+                backgroundColor: activeIndex === index ? item.color : "white",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                padding: "20px",
+                borderRadius: "12px",
+                boxShadow:
+                  activeIndex === index
+                    ? "0px 4px 10px rgba(255, 255, 255, 0.1)"
+                    : "none",
+                position: "relative",
+                minWidth: "50px",
+                marginBottom: isMobile ? "10px" : "0",
+              }}
+            >
+              <span
+                style={{
+                  fontSize: "6rem",
+                  fontWeight: "bold",
+                  color: "rgba(194, 194, 194, 0.32)",
+                  position: "absolute",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  transition: "opacity 0.3s linear",
+                }}
+              >
+                {item.number}
+              </span>
+
+              {activeIndex === index || isMobile ? (
+                <div style={{ textAlign: "center", zIndex: 2 }}>
+                  <h3
+                    style={{ margin: "0", fontSize: "1.8rem", color: "#333" }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "1rem",
+                      marginTop: "10px",
+                      opacity: 1,
+                      transition: "opacity 0.3s linear",
+                    }}
+                  >
+                    {item.description}
+                  </p>
+                </div>
+              ) : (
+                <h3 style={{ transform: "rotate(0deg)", color: "#777" }}>
+                  {item.title}
+                </h3>
+              )}
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+};
+
+export default DNASection2;

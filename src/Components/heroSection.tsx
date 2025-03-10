@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import StatisticsSection from "./RSA/Stats";
 
 interface BallPosition {
   x: number;
@@ -129,6 +130,7 @@ function HeroSection() {
           </Row>
         </Container>
         <div className="ball" />
+        
       </section>
     </>
   );
