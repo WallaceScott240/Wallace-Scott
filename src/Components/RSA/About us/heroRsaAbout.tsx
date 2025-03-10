@@ -5,7 +5,7 @@ const HeroSectionRSAabout = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('/src/Components/images/v.jpg')", // Replace with actual network image URL
+        backgroundImage: "url('https://images.pexels.com/photos/2294881/pexels-photo-2294881.jpeg?auto=compress&cs=tinysrgb&w=600')", // Replace with actual network image URL
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
