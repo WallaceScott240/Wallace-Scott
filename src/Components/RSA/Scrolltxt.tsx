@@ -39,7 +39,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
   marquee: {
     display: "inline-flex",
-    animation: "marquee 40s linear infinite", // Slowed down animation
+    animation: "marquee 150s linear infinite", // Slowed down animation
   },
   text: {
     fontSize: "4.5rem", // Slightly larger text for more impact

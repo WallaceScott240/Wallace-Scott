@@ -1,4 +1,7 @@
 import React from "react";
+import Hero1 from "../assets/Hero1.jpg";
+import Hero2 from "../assets/Hero2.png";
+import Hero3 from "../assets/Hero3.png";
 import { Container, Button, Row, Col, Carousel } from "react-bootstrap";
 
 const HeroRSASection = () => {
@@ -97,21 +100,21 @@ const HeroRSASection = () => {
       >
         <Carousel.Item>
           <img
-            src="/images/Hero1.jpg"
+            src="/assets/Hero4.png"
             alt="Slide 1"
             style={{ width: "100%", height: "80vh", objectFit: "cover" }}
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            src="/images/Hero2.png"
+            src="/assets/Hero2.png"
             alt="Slide 2"
             style={{ width: "100%", height: "80vh", objectFit: "cover" }}
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            src="/images/Hero3.png"
+            src="/assets/Hero3.png"
             alt="Slide 3"
             style={{ width: "100%", height: "80vh", objectFit: "cover" }}
           />
