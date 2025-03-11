@@ -1,25 +1,13 @@
 import React from "react";
-import { Container, Button, Row, Col } from "react-bootstrap";
+import { Container, Button, Row, Col, Carousel } from "react-bootstrap";
 
 const HeroRSASection = () => {
   return (
     <div
       style={{
-        backgroundColor: "#DAA520", 
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        height: "80vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        color: "white",
-        textAlign: "center",
         position: "relative",
-        borderRadius: "0px",
-        margin: "1px",
-        width: "calc(100% - 2px)",
-        boxShadow: "0 10px 30px rgba(0, 0, 0, 0)",
+        width: "100%",
+        height: "80vh",
         overflow: "hidden",
       }}
     >
@@ -30,45 +18,105 @@ const HeroRSASection = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          borderRadius: "0px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          background: "rgba(0, 0, 0, 0.02)",
+          color: "white",
+          zIndex: 2,
+          padding: "20px",
         }}
-      ></div>
-      <Container>
-        <Row className="align-items-center text-center text-md-start">
-          <Col md={6} sm={12}>
-            <h1
-              style={{
-                fontSize: "2.5rem",
-                fontWeight: "bold",
-                textTransform: "uppercase",
-                color: "white",
-              }}
-            >
-              Innovate Your Future
-            </h1>
-            <p
-              style={{ fontSize: "1.1rem", maxWidth: "600px", color: "white" }}
-            >
-              Discover cutting-edge solutions and stunning UI/UX designs that
-              enhance your digital experience.
-            </p>
-            <Button
-              variant="dark"
-              style={{
-                marginTop: "10px",
-                fontSize: "1rem",
-                padding: "8px 16px",
-                borderRadius: "50px",
-              }}
-            >
-              Get Started
-            </Button>
-          </Col>
-        </Row>
-      </Container>
+      >
+        <Container>
+          <Row className="align-items-center text-center text-md-start">
+            <Col md={12} sm={12}>
+              <h1
+                style={{
+                  fontSize: "2.5rem",
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                  fontFamily: "'Inter', sans-serif",
+                }}
+              >
+                <span
+                  style={{
+                    fontWeight: "300",
+                    fontStyle: "italic",
+                    color: "Black",
+                    fontFamily: "'EB Garamond', serif",
+                  }}
+                >
+                  FOR
+                </span>{" "}
+                <span
+                  style={{
+                    fontWeight: "800",
+                    fontFamily: "'Inter', sans-serif",
+                  }}
+                >
+                  Researchers and Inventors across academia, management,
+                  engineering, and information technology
+                </span>
+              </h1>
+
+              <p
+                style={{
+                  fontSize: "1.1rem",
+                  maxWidth: "900px",
+                  color: "black",
+                }}
+              >
+                We enhance global innovation and knowledge dissemination by
+                providing expert guidance and support in securing intellectual
+                property rights and achieving publication in leading academic
+                journals
+              </p>
+              <Button
+                variant="light"
+                style={{
+                  marginTop: "10px",
+                  fontSize: "1rem",
+                  padding: "8px 16px",
+                  borderRadius: "50px",
+                }}
+              >
+                Get Started
+              </Button>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      <Carousel
+        controls={false}
+        indicators={false}
+        interval={5000}
+        fade
+        style={{ position: "relative", zIndex: 1 }}
+      >
+        <Carousel.Item>
+          <img
+            src="/src/Components/images/Hero4.png"
+            alt="Slide 1"
+            style={{ width: "100%", height: "80vh", objectFit: "cover" }}
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            src="/src/Components/images/Hero2.png"
+            alt="Slide 2"
+            style={{ width: "100%", height: "80vh", objectFit: "cover" }}
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            src="/src/Components/images/Hero3.png"
+            alt="Slide 3"
+            style={{ width: "100%", height: "80vh", objectFit: "cover" }}
+          />
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 };
