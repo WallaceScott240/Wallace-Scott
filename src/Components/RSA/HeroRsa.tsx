@@ -97,7 +97,7 @@ const HeroRSASection = () => {
       >
         <Carousel.Item>
           <img
-            src="/images/Hero4.png"
+            src="/images/Hero1.jpg"
             alt="Slide 1"
             style={{ width: "100%", height: "80vh", objectFit: "cover" }}
           />
