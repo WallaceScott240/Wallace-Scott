@@ -25,12 +25,11 @@ const ResearchServices = () => {
       {/* Section Header */}
       <Row className="">
         <Col>
-          <h2 className="fw-bold">
-            One-Stop Shop <br /> for Research and Innovation
-          </h2>
+          <h2 className="fw-bold">Key Services @ RSA Labs</h2>
           <p className="fs-5 text-muted">
-            We offer a comprehensive suite of services designed to meet the diverse needs of its clientele, 
-            which includes universities, research institutions, independent researchers, start-ups, SMEs, and large corporations.
+            RSA Labs specialises in supporting researchers and inventors across
+            a variety of sectors including academia, management, engineering,
+            and information technology.
           </p>
         </Col>
       </Row>

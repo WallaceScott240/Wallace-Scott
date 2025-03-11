@@ -10,6 +10,12 @@ import StatsSection2 from "../Stats2";
 import ContactSectionRSA from "../Contact";
 import FAQSection from "../FAQ";
 import FooterRSA from "../Foot";
+import ScrollingText from "../Scrolltxt";
+import Marquee from "../Scrolltxt";
+import MarqueeSection from "../Scrolltxt";
+import ResearchServices from "../About us/AboutusCards";
+import FooterSection from "../About us/FootSec";
+import Mission from "../About us/Mission";
 
 const Home2: React.FC = () => {
   return (
@@ -20,7 +26,6 @@ const Home2: React.FC = () => {
         <HeroRSASection></HeroRSASection>
       </div>
       <div>
-        <ContentSection></ContentSection>
         <CardSection></CardSection>
         <CTA1Section></CTA1Section>
       </div>
@@ -30,11 +35,19 @@ const Home2: React.FC = () => {
       <div>
         <DNASection></DNASection>
       </div>
+     
       <div>
         <StatsSection2></StatsSection2>
       </div>
+      <MarqueeSection></MarqueeSection>
+      <div>
+      <ResearchServices></ResearchServices>
+      </div>
       <div>
         <FAQSection></FAQSection>
+      </div>
+      <div>
+      <FooterSection></FooterSection>
       </div>
       <div>
         <ContactSectionRSA></ContactSectionRSA>

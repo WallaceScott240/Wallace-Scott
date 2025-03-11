@@ -5,26 +5,30 @@ const cards = [
   {
     number: "1",
     title: "Expert Team",
-    description: "Comprising of PhDs, patent attorneys, and specialists with extensive experience in academia and industry",
-    color: "#E4BA4D",
+    description:
+      "Comprising of PhDs, patent attorneys, and specialists with extensive experience in academia and industry",
+    color: "#F9F0BB",
   },
   {
     number: "2",
     title: "Global Reach",
-    description: "Ability to serve clients around the world with multilingual support and understanding of international publication and patent laws.",
-    color: "#E4BA4D",
+    description:
+      "Ability to serve clients around the world with multilingual support and understanding of international publication and patent laws.",
+    color: "#F9F0BB",
   },
   {
     number: "3",
     title: "Technology Driven",
-    description: "Utilizing cutting-edge technology to streamline the publication and patent application processes, ensuring efficiency and cost-effectiveness.",
-    color: "#E4BA4D",
+    description:
+      "Utilizing cutting-edge technology to streamline the publication and patent application processes, ensuring efficiency and cost-effectiveness.",
+    color: "#F9F0BB",
   },
   {
     number: "4",
     title: "Client-centric Approach",
-    description: "Customized services tailored to the specific needs and goals of each client, with a focus on building long-term relationships.",
-    color: "#E4BA4D",
+    description:
+      "Customized services tailored to the specific needs and goals of each client, with a focus on building long-term relationships.",
+    color: "#F9F0BB",
   },
 ];
 
@@ -53,7 +57,7 @@ const DNASection = () => {
             color: "black",
           }}
         >
-          Our DNA For Success
+          Strategic Advantages @ RSA Labs 
         </h2>
         <p
           style={{
@@ -64,8 +68,10 @@ const DNASection = () => {
             color: "black",
           }}
         >
-          We believe everyone can evolve and grow continuously to discover and
-          manifest their unlimited potential with Thrive Skills.
+          Established in 2023, RSA Labs
+          specialises in supporting researchers and inventors across a variety
+          of sectors including academia, management, engineering, and
+          information technology.
         </p>
 
         <div

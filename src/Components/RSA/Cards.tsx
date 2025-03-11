@@ -6,52 +6,53 @@ function CardSection() {
     {
       image:
         "https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "Tech Innovations",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+      title: "Publications",
+      text: "Assistance with research papers, essays, theses, and dissertations",
       link: "#",
     },
     {
       image:
         "https://images.pexels.com/photos/1139319/pexels-photo-1139319.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "Business Growth",
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+      title: "Patents",
+      text: "Enable Patent application preparation, filing, publication and granting.",
       link: "#",
     },
     {
       image:
         "https://images.pexels.com/photos/7516347/pexels-photo-7516347.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "Creative Design",
-      text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      title: "Collaborations",
+      text: "Promote, and review progress on research collaborations",
       link: "#",
     },
     {
       image:
         "https://images.pexels.com/photos/6147148/pexels-photo-6147148.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "Coding Mastery",
-      text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      title: "Research Grants",
+      text: "Assistance in applying for research grants, mentorship programmes",
       link: "#",
     },
   ];
 
   return (
     <Container className="py-5">
-
-      <div className="mb-4">
-        <h2 style={{ fontWeight: "bold", color: "#333" , textAlign:"center"}}>
-          Explore Our Insights
+      <div className="mb-4 text-center">
+        <h2 style={{ fontWeight: "bold", color: "#333" }}>
+          Accelerate Your Research & Innovation
         </h2>
-        <p style={{ color: "#666", maxWidth: "", margin: "", textAlign: "center" }}>
-          Discover the latest trends, insights, and innovations in various
-          domains.
+        <p style={{ color: "#666", maxWidth: "1000px", margin: "0 auto" }}>
+          Unlock new possibilities in research and innovation with our
+          comprehensive support services. From assisting with publications and
+          patent filings to fostering collaborations and securing research
+          grants, we provide the guidance and resources you need to succeed.
+          Let’s turn your ideas into impactful contributions.
         </p>
       </div>
-      <div style={{ height: 20 }}></div>
 
-      <Row>
+      <Row className="justify-content-center">
         {cardData.map((card, index) => (
-          <Col md={6} lg={3} className="mb-4" key={index}>
+          <Col xs={12} sm={6} md={6} lg={3} className="mb-4" key={index}>
             <Card
-              className="border-0 shadow-sm"
+              className="border-0 shadow-sm h-100"
               style={{
                 borderRadius: "12px",
                 transition:
@@ -73,7 +74,7 @@ function CardSection() {
                 src={card.image}
                 style={{ borderRadius: "12px 12px 0 0" }}
               />
-              <Card.Body className="text">
+              <Card.Body className="d-flex flex-column">
                 <Card.Title
                   style={{
                     fontSize: "1.2rem",
@@ -92,6 +93,7 @@ function CardSection() {
                     color: "#888",
                     textDecoration: "none",
                     fontSize: "0.9rem",
+                    marginTop: "auto",
                   }}
                 >
                   Learn More →
@@ -99,10 +101,8 @@ function CardSection() {
               </Card.Body>
             </Card>
           </Col>
-
         ))}
       </Row>
-      
     </Container>
   );
 }

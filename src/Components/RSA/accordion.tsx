@@ -3,30 +3,30 @@ import { Container } from "react-bootstrap";
 
 const accordionItems = [
   {
-    title: "LEARNING",
-    color: "#E0AD2D",
-    content: "To get familiar with key concepts and frameworks",
+    title: "Publications",
+    color: "#FF7100  ",
+    content: "Get published in top journals with expert support.",
   },
   {
-    title: "APPLICATION",
-    color: "#E2B33D",
+    title: "Patents",
+    color: "#44A659",
     content:
-      "To consistently practice and track growth with rituals and actions",
+      "Protect your ideas with seamless patent filing.",
   },
   {
-    title: "EXPERIENCE",
-    color: "#E4BA4D",
-    content: "Applying learned concepts in real-world scenarios",
+    title: "Collaboration",
+    color: "#008CFF ",
+    content: "Connect with experts to drive innovation.",
   },
   {
-    title: "COACHING",
-    color: "#E7C05D",
-    content: "Guidance from experts to refine skills",
+    title: "Technology",
+    color: "#FF3363 ",
+    content: "Use AI and blockchain for secure research.",
   },
   {
-    title: "NUDGING",
-    color: "#E9C66E",
-    content: "Subtle reminders to encourage consistency",
+    title: "Mentorship",
+    color: "#4A4A4A ",
+    content: "Learn from industry and academic leaders.",
   },
 ];
 
@@ -53,7 +53,7 @@ const AccordionSection = () => {
             color: "#333",
           }}
         >
-          Our Theory of Change
+          Empowering Innovation & Research 
         </h2>
         <p
           style={{
@@ -63,9 +63,10 @@ const AccordionSection = () => {
             margin: "0 auto 40px",
           }}
         >
-          A creative pedagogical approach with benchmark consumption, unmatched
-          learner love, and real-world impact for today’s constantly shifting
-          workplaces.
+          We help researchers and innovators publish, patent, and protect their
+          ideas. From academic journals to intellectual property, we make the
+          process seamless. Your innovation deserves recognition—let’s make it
+          happen!
         </p>
 
         <div
