@@ -91,27 +91,27 @@ const HeroRSASection = () => {
       <Carousel
         controls={false}
         indicators={false}
-        interval={5000}
+        interval={10000}
         fade
         style={{ position: "relative", zIndex: 1 }}
       >
         <Carousel.Item>
           <img
-            src="/src/Components/images/Hero4.png"
+            src="/images/Hero4.png"
             alt="Slide 1"
             style={{ width: "100%", height: "80vh", objectFit: "cover" }}
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            src="/src/Components/images/Hero2.png"
+            src="/images/Hero2.png"
             alt="Slide 2"
             style={{ width: "100%", height: "80vh", objectFit: "cover" }}
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            src="/src/Components/images/Hero3.png"
+            src="/images/Hero3.png"
             alt="Slide 3"
             style={{ width: "100%", height: "80vh", objectFit: "cover" }}
           />
