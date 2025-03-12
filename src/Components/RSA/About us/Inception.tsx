@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 const Inception = () => {
   return (
@@ -7,36 +7,37 @@ const Inception = () => {
       style={{
         position: "relative",
         width: "100%",
-        height: "80vh",
-        backgroundImage: `url("/assets/HeroE.png")`, // Using image from public folder
+        minHeight: "80vh",
+        backgroundImage: `url("/assets/HeroE.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        textAlign: "center",
+        textAlign: "left", // Left-align all text
+        padding: "40px 20px",
       }}
     >
       <div
         style={{
           width: "100%",
           height: "100%",
-          // background: "rgba(255, 255, 255, 0.6)", // Light overlay for readability
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: "20px",
         }}
       >
         <Container>
-          <Row className="align-items-center text-center text-md-start">
-            <Col md={12} sm={12}>
+          <Row className="align-items-center">
+            <Col lg={9} md={10} sm={12}>
+              {/* Title */}
               <h1
                 style={{
-                  fontSize: "3rem",
+                  fontSize: "clamp(2.5rem, 5vw, 4rem)", // Responsive size
                   fontWeight: "bold",
                   textTransform: "uppercase",
                   fontFamily: "'Inter', sans-serif",
+                  textAlign: "left", // Left-aligned
                 }}
               >
                 <span
@@ -59,41 +60,36 @@ const Inception = () => {
                   Inception
                 </span>
               </h1>
+
+              {/* Separator */}
               <hr
                 style={{
                   border: "1px solid white",
-                  width: "100%",
-                  margin: "15px 0",
+                  width: "90%", // Left-aligned width
+                  margin: "20px 0",
                 }}
               />
 
+              {/* Description */}
               <p
                 style={{
-                  fontSize: "1.1rem",
-                  maxWidth: "900px",
+                  fontSize: "clamp(1rem, 2.2vw, 1.3rem)", // Auto-adjust font size
+                  maxWidth: "800px",
                   color: "white",
+                  lineHeight: "1.7",
+                  textAlign: "justify", // Clean justified text
                 }}
               >
-                RSA Labs Private Limited is a Bangalore, India based provider of
+                RSA Labs Private Limited is a Bangalore, India-based provider of
                 research publication services and patent assistance to Indian
                 and Global Corporate Organisations and Educational Institutions.
                 Established in 2023, the company specializes in supporting
-                researchers and inventors across a variety of sectors including
+                researchers and inventors across various sectors, including
                 academia, management, engineering, and information technology.
-                RSA Labs' mission is to enhance global innovation and knowledge
+                Our mission is to enhance global innovation and knowledge
                 dissemination by providing expert guidance and support in
                 securing intellectual property rights and achieving publication
-                in leading academic journals. RSA Labs is distinguished by its
-                expert team, which includes PhD holders, patent attorneys, and
-                specialists with deep roots in both academia and industry. This
-                wealth of expertise allows us to offer customized,
-                client-centric services tailored to the unique goals and needs
-                of each client. We pride ourselves on building long-term
-                relationships with clients, providing them with reliable support
-                that extends beyond a single project. We remain committed to our
-                mission of empowering researchers and inventors, ensuring that
-                their innovations and discoveries gain the recognition and
-                protection they deserve.
+                in leading academic journals.
               </p>
             </Col>
           </Row>

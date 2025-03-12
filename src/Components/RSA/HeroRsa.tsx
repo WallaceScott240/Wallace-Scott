@@ -1,7 +1,4 @@
 import React from "react";
-import Hero1 from "../assets/Hero1.jpg";
-import Hero2 from "../assets/Hero2.png";
-import Hero3 from "../assets/Hero3.png";
 import { Container, Button, Row, Col, Carousel } from "react-bootstrap";
 
 const HeroRSASection = () => {
@@ -14,43 +11,43 @@ const HeroRSASection = () => {
         overflow: "hidden",
       }}
     >
+      {/* Text Content Layer (Centered) */}
       <div
         style={{
           position: "absolute",
-          top: 0,
-          left: 0,
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)", // Centers both vertically & horizontally
           width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
           textAlign: "center",
-          background: "rgba(0, 0, 0, 0.02)",
           color: "white",
           zIndex: 2,
           padding: "20px",
         }}
       >
         <Container>
-          <Row className="align-items-center text-center text-md-start">
-            <Col md={12} sm={12}>
+          <Row className="justify-content-center">
+            <Col lg={8} md={10} sm={12}>
+              {/* Responsive Heading */}
               <h1
                 style={{
-                  fontSize: "2.5rem",
+                  fontSize: "clamp(2rem, 4vw, 3.5rem)",
                   fontWeight: "bold",
                   textTransform: "uppercase",
                   fontFamily: "'Inter', sans-serif",
+                  lineHeight: "1.2",
+
                 }}
               >
                 <span
                   style={{
                     fontWeight: "300",
                     fontStyle: "italic",
-                    color: "Black",
+                    color: "black",
                     fontFamily: "'EB Garamond', serif",
                   }}
                 >
-                  FOR
+                  For
                 </span>{" "}
                 <span
                   style={{
@@ -63,24 +60,29 @@ const HeroRSASection = () => {
                 </span>
               </h1>
 
+              {/* Responsive Paragraph */}
               <p
                 style={{
-                  fontSize: "1.1rem",
-                  maxWidth: "900px",
+                  fontSize: "clamp(1rem, 1.8vw, 1.2rem)",
+                  maxWidth: "750px",
+                  margin: "0 auto", // Centers the text block
                   color: "black",
+                  lineHeight: "1.6",
                 }}
               >
                 We enhance global innovation and knowledge dissemination by
                 providing expert guidance and support in securing intellectual
                 property rights and achieving publication in leading academic
-                journals
+                journals.
               </p>
+
+              {/* Centered Button */}
               <Button
                 variant="light"
                 style={{
                   marginTop: "10px",
-                  fontSize: "1rem",
-                  padding: "8px 16px",
+                  fontSize: "clamp(0.9rem, 1.2vw, 1rem)",
+                  padding: "10px 20px",
                   borderRadius: "50px",
                 }}
               >
@@ -91,6 +93,7 @@ const HeroRSASection = () => {
         </Container>
       </div>
 
+      {/* Background Image Carousel */}
       <Carousel
         controls={false}
         indicators={false}
@@ -98,27 +101,21 @@ const HeroRSASection = () => {
         fade
         style={{ position: "relative", zIndex: 1 }}
       >
-        <Carousel.Item>
-          <img
-            src="/assets/Hero4.png"
-            alt="Slide 1"
-            style={{ width: "100%", height: "80vh", objectFit: "cover" }}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src="/assets/Hero2.png"
-            alt="Slide 2"
-            style={{ width: "100%", height: "80vh", objectFit: "cover" }}
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src="/assets/Hero3.png"
-            alt="Slide 3"
-            style={{ width: "100%", height: "80vh", objectFit: "cover" }}
-          />
-        </Carousel.Item>
+        {["/assets/Hero4.png", "/assets/Hero2.png", "/assets/Hero3.png"].map(
+          (image, index) => (
+            <Carousel.Item key={index}>
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                style={{
+                  width: "100%",
+                  height: "80vh",
+                  objectFit: "cover",
+                }}
+              />
+            </Carousel.Item>
+          )
+        )}
       </Carousel>
     </div>
   );

@@ -23,7 +23,7 @@ const ContentSection = () => {
             variant="light"
             className="fw-bold rounded-pill px-4 py-2 d-flex align-items-center"
           >
-            Lorem Ipsum <span className="ms-2">→</span>
+            Get Started <span className="ms-2">→</span>
           </Button>
         </div>
       </div>
