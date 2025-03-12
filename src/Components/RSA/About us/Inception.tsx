@@ -1,38 +1,79 @@
-import { Col, Container, Row } from "react-bootstrap";
-import wallace from "./Components/images/wallace.jpg";
-import html from "./Components/images/html.png";
-import flutter from "./Components/images/flutter.png";
-import react from "./Components/images/react.png";
-import css from "./Components/images/css.png";
-import javascript from "./Components/images/javascript.png";
-import firebase from "./Components/images/firebase.png";
-import UIUX from "./Components/images/UI/UX.png";
-import figma from "./Components/images/figma.png";
-import tredimg from "./Components/images/3Dart.png";
+import React from "react";
+import { Container, Button, Row, Col } from "react-bootstrap";
 
-function Inception() {
-  const imageStyle = {
-    maxWidth: "100%",
-    borderRadius: "10px",
-    boxShadow: "0px 0px 25px -5px rgba(255,255,255,0.20)",
-  };
-  const aboutStyle = {
-    backgroundColor: "black",
-    // borderRadius: "5px",
-    padding: "50px",
-    margin: "0px",
-    // boxShadow: "0px 0px 15px -1px #EF2D56",
-    color: "white",
-  };
-
+const Inception = () => {
   return (
-    <>
-      <div style={aboutStyle}>
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "80vh",
+        backgroundImage: `url("/assets/HeroE.png")`, // Using image from public folder
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+      }}
+    >
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          // background: "rgba(255, 255, 255, 0.6)", // Light overlay for readability
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "20px",
+        }}
+      >
         <Container>
-          <Row className="justify-content-center align-items-center">
-            <Col xs={12} md={12}>
-              <h2 className="">The Inception</h2>
-              <p className="lead">
+          <Row className="align-items-center text-center text-md-start">
+            <Col md={12} sm={12}>
+              <h1
+                style={{
+                  fontSize: "3rem",
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                  fontFamily: "'Inter', sans-serif",
+                }}
+              >
+                <span
+                  style={{
+                    fontWeight: "300",
+                    fontStyle: "italic",
+                    color: "black",
+                    fontFamily: "'EB Garamond', serif",
+                  }}
+                >
+                  The
+                </span>{" "}
+                <span
+                  style={{
+                    fontWeight: "800",
+                    fontFamily: "'Inter', sans-serif",
+                    color: "white",
+                  }}
+                >
+                  Inception
+                </span>
+              </h1>
+              <hr
+                style={{
+                  border: "1px solid white",
+                  width: "100%",
+                  margin: "15px 0",
+                }}
+              />
+
+              <p
+                style={{
+                  fontSize: "1.1rem",
+                  maxWidth: "900px",
+                  color: "white",
+                }}
+              >
                 RSA Labs Private Limited is a Bangalore, India based provider of
                 research publication services and patent assistance to Indian
                 and Global Corporate Organisations and Educational Institutions.
@@ -54,12 +95,12 @@ function Inception() {
                 their innovations and discoveries gain the recognition and
                 protection they deserve.
               </p>
-        
             </Col>
           </Row>
         </Container>
       </div>
-    </>
+    </div>
   );
-}
+};
+
 export default Inception;

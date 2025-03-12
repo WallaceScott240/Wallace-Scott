@@ -28,29 +28,21 @@ import Innovation from "./ShapingInnovation";
 const ContentSectionRsaLabs: React.FC = () => {
   return (
     <>
-      <div style={{ height: "88px" }}></div>
 
       <div>
         <HeroSectionRSAabout></HeroSectionRSAabout>
-      </div>
-      <div>
-        <Inception></Inception>
       </div>
       <div style={{ height: "50px" }}></div>
 
       <div>
         <Origin></Origin>
       </div>
-
       <div>
-        <div style={{ height: "3px", backgroundColor: "black" }}></div>
-        <div style={{ height: "5px", backgroundColor: "white" }}></div>
-
-        <CTA2Section></CTA2Section>
-
-        <div style={{ height: "5px", backgroundColor: "white" }}></div>
-        <div style={{ height: "3px", backgroundColor: "black" }}></div>
+        <Inception></Inception>
       </div>
+      <div style={{ height: "50px" }}></div>
+
+      
 
       <div>
         <Mission></Mission>

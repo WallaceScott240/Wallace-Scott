@@ -1,56 +1,72 @@
 import React from "react";
-import { Container, Button, Row, Col } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
+import { BsChevronDown } from "react-icons/bs";
 
 const HeroSectionRSAabout = () => {
   return (
     <div
       style={{
-        backgroundImage: "url('https://images.pexels.com/photos/2294881/pexels-photo-2294881.jpeg?auto=compress&cs=tinysrgb&w=600')", // Replace with actual network image URL
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        height: "80vh",
+        width: "100vw",
+        height: "100vh",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        backgroundColor: "#121212",
         color: "white",
         textAlign: "center",
         position: "relative",
-        width: "100%",
-        overflow: "hidden",
       }}
     >
       <Container>
-        <Row className="justify-content-center text-center">
-          <Col md={8} sm={12}>
-            <h1
-              style={{
-                fontSize: "2.5rem",
-                fontWeight: "bold",
-                textTransform: "uppercase",
-                color: "white",
-              }}
-            >
-              Welcome Researchers and Inventors
-            </h1>
-            <p style={{ fontSize: "1.1rem", color: "white" }}>
-              Discover cutting-edge solutions and stunning UI/UX designs that
-              enhance your digital experience.
-            </p>
-            <Button
-              variant="outline-light"
-              style={{
-                marginTop: "10px",
-                fontSize: "1rem",
-                padding: "10px 20px",
-                borderRadius: "50px",
-              }}
-            >
-              Get Started
-            </Button>
-          </Col>
-        </Row>
+        <h1 style={{ fontSize: "2.5rem", fontWeight: "bold" }}>
+          Welcome Researchers <br /> and Inventors
+        </h1>
+        <p style={{ fontSize: "1.1rem", opacity: 0.8 }}>
+          Empowering global innovation and knowledge dissemination
+        </p>
+        <Button
+          variant="light"
+          style={{
+            fontSize: "1rem",
+            padding: "10px 20px",
+            borderRadius: "8px",
+            fontWeight: "bold",
+            marginTop: "20px",
+          }}
+        >
+          Get Started
+        </Button>
       </Container>
+
+      {/* Scroll Indicator */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "30px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          textAlign: "center",
+        }}
+      >
+        <BsChevronDown
+          size={30}
+          style={{
+            animation: "bounce 1.5s infinite",
+            opacity: 0.8,
+          }}
+        />
+      </div>
+
+      {/* CSS for bounce animation */}
+      <style>
+        {`
+          @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+          }
+        `}
+      </style>
     </div>
   );
 };

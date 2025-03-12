@@ -9,12 +9,12 @@ const AboutUs = () => {
         <Col md={6} className="text-center">
           <div className="rounded-4 overflow-hidden shadow-lg">
             <img
-              src="https://images.pexels.com/photos/14747958/pexels-photo-14747958.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="RSA Labs Work"
+              src="/assets/OurStory.png" // Directly from the public folder
+              alt="Hero Section"
               className="w-100"
               style={{
                 objectFit: "cover",
-                maxHeight: "350px", // Adjusted for better proportion
+                maxHeight: "350px",
                 width: "100%",
                 borderRadius: "20px",
               }}
@@ -26,9 +26,10 @@ const AboutUs = () => {
         <Col md={6} className="ps-lg-5 mt-4 mt-md-0">
           <h2 className="fw-bold mb-3">Where It All Began</h2>
           <p className="text-muted fs-5">
-            Our academic journey has always been about crafting customized solutions
-            for inventors, artists, and researchers—ensuring their intellectual property
-            remains secure while empowering their creativity.
+            Our academic journey has always been about crafting customized
+            solutions for inventors, artists, and researchers—ensuring their
+            intellectual property remains secure while empowering their
+            creativity.
           </p>
         </Col>
       </Row>
