@@ -61,7 +61,7 @@ const FooterRSA: React.FC = () => {
 // Inline Styles
 const styles = {
   footer: {
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "white",
     padding: "40px 0",
     borderTop: "1px solid #ddd",
     boxShadow: "0px -3px 10px rgba(0, 0, 0, 0.08)", // Soft shadow for subtle depth
