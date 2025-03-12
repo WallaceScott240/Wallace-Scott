@@ -8,6 +8,7 @@ import KeyServicesPage from "./Components/RSA/About us/KeyServicesPage";
 import Research from "./Components/RSA/About us/ResearchPage";
 import Patent from "./Components/RSA/About us/PatentPage";
 import ScrollToTop from "./scrolltop"; // Import the ScrollToTop component
+import RapterPage from "./Components/RSA/About us/rapterPage";
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         <Route path="/key-services" element={<KeyServicesPage />} />
         <Route path="/research-publication" element={<Research />} />
         <Route path="/ipr-patent" element={<Patent />} />
+        <Route path="/rapter" element={<RapterPage />} />
       </Routes>
     </Router>
   );

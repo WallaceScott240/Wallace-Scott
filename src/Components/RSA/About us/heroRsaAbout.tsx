@@ -16,19 +16,30 @@ const HeroSectionRSAabout = () => {
         color: "white",
         textAlign: "center",
         position: "relative",
+        padding: "0 5vw",
       }}
     >
       <Container>
-        <h1 style={{ fontSize: "2.5rem", fontWeight: "bold" }}>
+        <h1
+          style={{
+            fontSize: "clamp(2rem, 5vw, 3.5rem)",
+            fontWeight: "bold",
+          }}
+        >
           Welcome Researchers <br /> and Inventors
         </h1>
-        <p style={{ fontSize: "1.1rem", opacity: 0.8 }}>
+        <p
+          style={{
+            fontSize: "clamp(1rem, 2.5vw, 1.5rem)",
+            opacity: 0.8,
+          }}
+        >
           Empowering global innovation and knowledge dissemination
         </p>
         <Button
           variant="light"
           style={{
-            fontSize: "1rem",
+            fontSize: "clamp(0.9rem, 1.5vw, 1.2rem)",
             padding: "10px 20px",
             borderRadius: "8px",
             fontWeight: "bold",

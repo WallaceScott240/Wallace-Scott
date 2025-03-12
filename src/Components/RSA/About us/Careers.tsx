@@ -12,11 +12,10 @@ const CareerHero = () => {
         justifyContent: "center",
         width: "100%",
         overflow: "hidden",
-        backgroundImage:
-          "url('https://cdn.pixabay.com/photo/2024/03/02/11/50/ai-generated-8608442_640.png')", // Replace with actual network image URL
         backgroundSize: "cover",
         backgroundPosition: "left center", // Set image position to center-left
         backgroundRepeat: "no-repeat",
+        backgroundColor:'#355E3B'
       }}
     >
       {/* Overlay */}

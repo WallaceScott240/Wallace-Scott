@@ -25,51 +25,32 @@ import InsightsSection from "./AboutusCards";
 import ResearchServices from "./AboutusCards";
 import Innovation from "./ShapingInnovation";
 import CollaborationSection from "./Collaberation";
+import RapterHeroSection from "./RapterHero";
+import NewSection from "./Playfair";
+import KeyServices from "./KeyServices";
+import InteractiveStrip from "./coolSection";
 
-const ContentSectionRsaLabs: React.FC = () => {
+const RapterPage: React.FC = () => {
   return (
     <>
+      <div style={{ height: "88px" }}></div>
       <div>
-        <HeroSectionRSAabout></HeroSectionRSAabout>
-      </div>
-      <div style={{ height: "50px" }}></div>
-
-      <div>
-        <Origin></Origin>
+        <RapterHeroSection></RapterHeroSection>
       </div>
       <div>
-        <Inception></Inception>
-      </div>
-
-      <div style={{ height: "50px" }}></div>
-
-      <div>
-        <Mission></Mission>
-      </div>
-
-      <div>
-        <ContentSection></ContentSection>
+      <InteractiveStrip></InteractiveStrip>
       </div>
       <div>
-        <ResearchServices></ResearchServices>
+        <NewSection></NewSection>
       </div>
       <div>
-        <ExpertGuide></ExpertGuide>
+      <KeyServices></KeyServices>
       </div>
       <div>
-        <CollaborationSection></CollaborationSection>
-      </div>
-      <div>
-        <Innovation></Innovation>
-      </div>
-      <div>
-        <ContactSectionRSA></ContactSectionRSA>
-      </div>
-      <div>
-        <FooterRSA></FooterRSA>
+      <FooterRSA></FooterRSA>
       </div>
     </>
   );
 };
 
-export default ContentSectionRsaLabs;
+export default RapterPage;

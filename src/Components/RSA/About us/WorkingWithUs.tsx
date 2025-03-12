@@ -17,7 +17,7 @@ function Workingwithus() {
     boxShadow: "0px 0px 25px -5px rgba(255,255,255,0.20)",
   };
   const aboutStyle = {
-    backgroundColor: "black",
+    backgroundColor: "#2E4431",
     // borderRadius: "5px",
     padding: "50px",
     margin: "0px",

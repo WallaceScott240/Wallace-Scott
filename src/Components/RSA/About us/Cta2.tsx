@@ -6,7 +6,7 @@ const CTA2Section = () => {
   return (
     <div
       style={{
-        backgroundColor: 'black',
+        backgroundColor: '#355E3B',
         color: "white",
         padding: "80px 20px",
         textAlign: "center", // Center align text

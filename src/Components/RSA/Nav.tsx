@@ -1,24 +1,34 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Container, Col } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const styles = {
-
   logoBox: {
+    display: "flex",
+    alignItems: "center",
     fontSize: "30px",
     fontWeight: "bold",
     color: "#333",
-  },};
+    gap: "10px",
+  },
+  logoImage: {
+    width: "161px", // Adjust size as needed
+    height: "61px",
+  }
+};
 
 const MyNavbar = () => {
   return (
-    <Navbar expand="lg" fixed="top" className=" bg-white py-3">
+    <Navbar expand="lg" fixed="top" className="bg-white py-3">
       <Container>
+        {/* Logo and Brand */}
         <Navbar.Brand as={Link} to="/" className="fw-bold text-dark">
-        <Col xs={12} md={4} className="d-flex justify-content-center mb-3 mb-md-0">
-            <div style={styles.logoBox}>RSA</div>
-          </Col>
+          <div style={styles.logoBox}>
+            <img src="/assets/RSA.png" alt="RSA Logo" style={styles.logoImage} />
+          </div>
         </Navbar.Brand>
+
+        {/* Toggle Button for Mobile */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto gap-3">

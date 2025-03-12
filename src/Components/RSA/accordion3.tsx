@@ -42,7 +42,7 @@ const DNASection2 = () => {
 
   return (
     <section
-      style={{ background: "white", padding: "60px 0", textAlign: "center" }}
+      style={{ background: "white", padding: "60px 0", textAlign: "center", marginTop:'50px' }}
     >
       <Container>
         <h2
