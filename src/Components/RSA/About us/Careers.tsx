@@ -13,9 +13,9 @@ const CareerHero = () => {
         width: "100%",
         overflow: "hidden",
         backgroundSize: "cover",
-        backgroundPosition: "left center", // Set image position to center-left
+        backgroundPosition: "left center",
         backgroundRepeat: "no-repeat",
-        backgroundColor:'#355E3B'
+        backgroundColor: "#355E3B",
       }}
     >
       {/* Overlay */}
@@ -26,7 +26,7 @@ const CareerHero = () => {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.0)", // Dark overlay for better contrast
+          backgroundColor: "rgba(0, 0, 0, 0.0)",
           zIndex: 1,
         }}
       ></div>
@@ -45,8 +45,8 @@ const CareerHero = () => {
               Join Our RSA Team
             </h1>
             <p style={{ fontSize: "1.1rem", color: "white" }}>
-              Rich blended journeys that your people will love for making them more
-              productive, effective, and happier.
+              Rich blended journeys that your people will love for making them
+              more productive, effective, and happier.
             </p>
             <Button
               variant="light"
@@ -56,6 +56,7 @@ const CareerHero = () => {
                 padding: "10px 20px",
                 borderRadius: "50px",
               }}
+              href="mailto:info@rsalabs.co?subject=Job Inquiry&body=Hello, I am interested in job openings at RSA Labs."
             >
               View Job Openings +
             </Button>

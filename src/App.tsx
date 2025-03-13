@@ -15,6 +15,7 @@ import NotFoundPage from "./Components/RSA/About us/Error";
 import Partners from "./Components/RSA/About us/PartnersPage";
 import Collabs from "./Components/RSA/About us/CollabsPage";
 import BlogPage from "./Components/RSA/About us/Blogpage";
+import ContactHero from "./Components/RSA/About us/ContactusPage";
 
 const App: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ const App: React.FC = () => {
         <Route path="/collaborations" element={<Collabs />} />
         <Route path="/resources" element={<NotFoundPage />} />
         <Route path="/blogs" element={<BlogPage />} />
+        <Route path="/contact" element={<ContactHero />} />
       </Routes>
     </Router>
   );

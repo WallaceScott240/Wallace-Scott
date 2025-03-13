@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { FaBookOpen, FaLightbulb } from "react-icons/fa"; // Import icons
+import { FaBookOpen, FaLightbulb } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; // Import navigation hook
 
 const services = [
   {
@@ -8,21 +9,24 @@ const services = [
     description:
       "Comprehensive support for research paper ideation, structuring, manuscript editing, and journal submission.",
     icon: <FaBookOpen />,
+    link: "/research-publication",
   },
   {
     title: "IPR and Patent Services",
     description:
       "Patent searches, application drafting, and legal support for securing intellectual property rights globally.",
     icon: <FaLightbulb />,
+    link: "/ipr-patent",
   },
 ];
 
 const KeyServices = () => {
+  const navigate = useNavigate(); // Initialize navigation
+
   return (
     <section className="key-services py-5">
       <Container>
         <Row className="align-items-center">
-          {/* Left Side: Title and Body Text (Wider section) */}
           <Col md={5} className="text-start">
             <h2 className="fw-bold mb-4">Key Services</h2>
             <p className="text-muted lead">
@@ -35,7 +39,6 @@ const KeyServices = () => {
             </p>
           </Col>
 
-          {/* Right Side: Service Cards (More compact) */}
           <Col md={7}>
             <Row className="g-4">
               {services.map((service, index) => (
@@ -50,6 +53,7 @@ const KeyServices = () => {
                       <Button
                         variant="outline-primary"
                         className="rounded-pill px-4"
+                        onClick={() => navigate(service.link)} // Navigate on click
                       >
                         Read More +
                       </Button>
@@ -62,7 +66,6 @@ const KeyServices = () => {
         </Row>
       </Container>
 
-      {/* Styling */}
       <style>{`
         .key-services {
           background: linear-gradient(to bottom right, #f8f9fa, #e3eaf0);

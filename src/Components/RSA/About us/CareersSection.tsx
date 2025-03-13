@@ -12,10 +12,19 @@ const jobListings = [
 ];
 
 const CareerSection = () => {
+  // Function to handle email application
+  const handleApply = (jobTitle: string) => {
+    const email = "info@rsalabs.co";
+    const subject = `Application for ${jobTitle} Position`;
+    const body = `Dear Hiring Team,\n\nI am interested in applying for the ${jobTitle} position at RSA Labs. Please find my resume attached.\n\nBest Regards,\n[Your Name]`;
+    
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <section className="career-section py-5">
       <Container>
-        <div className=" mb-5">
+        <div className="mb-5">
           <h2 className="fw-bold display-5 text-dark">Join Our Team</h2>
           <p className="text-muted fs-5">Discover opportunities to innovate, create, and grow with us.</p>
         </div>
@@ -28,7 +37,13 @@ const CareerSection = () => {
                   <h5 className="fw-bold job-title">{job.title}</h5>
                   <p className="text-muted job-meta">{job.department} • {job.location}</p>
                   <p className="text-muted job-description">{job.description}</p>
-                  <Button variant="dark" className="rounded-pill px-4">Apply Now</Button>
+                  <Button 
+                    variant="dark" 
+                    className="rounded-pill px-4" 
+                    onClick={() => handleApply(job.title)}
+                  >
+                    Apply Now
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>

@@ -1,15 +1,23 @@
-import { yellow } from "@mui/material/colors";
 import React from "react";
 import { Container, Button } from "react-bootstrap";
 
 const CTA2Section = () => {
+  // Function to handle the button click
+  const handleGetStarted = () => {
+    const email = "info@rsalabs.co";
+    const subject = "Inquiry: Getting Started with RSA Labs";
+    const body = `Dear RSA Labs Team,\n\nI am interested in learning more about opportunities at RSA Labs. Please provide further details.\n\nBest Regards,\n[Your Name]`;
+
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <div
       style={{
         backgroundColor: '#355E3B',
         color: "white",
         padding: "80px 20px",
-        textAlign: "center", // Center align text
+        textAlign: "center",
         width: "100vw",
         margin: "0",
         borderRadius: "0",
@@ -37,6 +45,7 @@ const CTA2Section = () => {
             padding: "10px 20px",
             borderRadius: "50px",
           }}
+          onClick={handleGetStarted}
         >
           Get Started
         </Button>

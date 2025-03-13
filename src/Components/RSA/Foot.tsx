@@ -15,56 +15,52 @@ const FooterRSA: React.FC = () => {
           </Col>
 
           {/* Links Section */}
-          <Col xs={12} md={4} className="d-flex flex-column align-items-center text-center mb-3 mb-md-0">
-            {[
-              "About Us",
-              "Research Publication Services",
-              "IPRs and Patents Service",
-              "RAPTOR",
-              "Blogs and Resources",
-            ].map((text, index) => (
-              <a key={index} href="#" style={styles.link}>
-                {text}
-              </a>
-            ))}
+          <Col xs={12} md={4} className="d-flex flex-column align-items-center text-center mb-3 mb-md-0" style={styles.navMenu}>
+            <a href="/rsa-labs" style={styles.link}>About Us</a>
+            <a href="/research-publication" style={styles.link}>Research Publication Services</a>
+            <a href="/ipr-patent" style={styles.link}>IPRs and Patents Service</a>
+            <a href="/rapter" style={styles.link}>RAPTER</a>
+            <a href="/blogs" style={styles.link}>Blogs and Resources</a>
           </Col>
 
           {/* Contact Section (Centered) */}
           <Col xs={12} md={4} className="d-flex flex-column align-items-center text-center">
             <h5 style={styles.contactTitle}>Contact Us</h5>
-            <p style={styles.contactText}>Phone: +91- 77085 77771</p>
-            <p style={styles.contactText}>Email: info@website.co</p>
-            <p style={styles.contactText}>Location: Bangalore, India</p>
-          </Col>
-        </Row>
-
-        {/* Copyright & Social Icons */}
-        <Row className="mt-4 justify-content-center align-items-center text-center">
-          <Col xs={12} md={6}>
-            <p style={styles.copyright}>© {new Date().getFullYear()} RSA. All Rights Reserved.</p>
-          </Col>
-          <Col xs={12} md={6} className="d-flex justify-content-center">
-            <div style={styles.iconContainer}>
-              {[FaInstagram, FaTwitter, FaLinkedin, FaYoutube].map(
-                (Icon, index) => (
-                  <Icon key={index} style={styles.icon} />
-                )
-              )}
-            </div>
+            <p style={styles.contactText}>
+              📞 <a href="tel:+917708577771" style={styles.contactLink}>+91-77085 77771</a>
+            </p>
+            <p style={styles.contactText}>
+              ✉️ <a href="mailto:info@rsalabs.co" style={styles.contactLink}>info@rsalabs.co</a>
+            </p>
+            <p style={styles.contactText}>📍 Bangalore, India</p>
           </Col>
         </Row>
       </Container>
+
+      {/* Copyright & Social Icons - Moved to Bottom */}
+      <div style={styles.footerBottom}>
+        <div style={styles.iconContainer}>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram style={styles.icon} /></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter style={styles.icon} /></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin style={styles.icon} /></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube style={styles.icon} /></a>
+        </div>
+        <br />
+        <p style={styles.copyright}>© {new Date().getFullYear()} RSA. All Rights Reserved.</p>
+
+      </div>
     </footer>
   );
 };
 
-// Inline Styles
-const styles = {
+// **Inline Styles (Fixed TypeScript Issue)**
+const styles: { [key: string]: React.CSSProperties } = {
   footer: {
     backgroundColor: "white",
-    padding: "40px 0",
+    padding: "40px 0 20px",
     borderTop: "1px solid #ddd",
-    boxShadow: "0px -3px 10px rgba(0, 0, 0, 0.08)", // Soft shadow for subtle depth
+    boxShadow: "0px -3px 10px rgba(0, 0, 0, 0.08)",
+    position: "relative", // Ensures it stays at the bottom dynamically
   },
   logoBox: {
     display: "flex",
@@ -72,14 +68,18 @@ const styles = {
     alignItems: "center",
   },
   logoImage: {
-    width: "220px", // Adjusted for better responsiveness
+    width: "220px",
     maxWidth: "100%",
     height: "auto",
+  },
+  navMenu: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "6px",
   },
   link: {
     color: "#333",
     textDecoration: "none",
-    marginBottom: "6px",
     fontSize: "14px",
     transition: "color 0.3s ease-in-out",
   },
@@ -91,9 +91,21 @@ const styles = {
     marginBottom: "4px",
     fontSize: "14px",
   },
+  contactLink: {
+    color: "#007bff",
+    textDecoration: "none",
+  },
+  footerBottom: {
+    textAlign: "center",
+    marginTop: "20px",
+    paddingTop: "10px",
+    borderTop: "1px solid #ddd",
+  },
   iconContainer: {
     display: "flex",
+    justifyContent: "center",
     gap: "12px",
+    marginTop: "10px",
   },
   icon: {
     fontSize: "20px",

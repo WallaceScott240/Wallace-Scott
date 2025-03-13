@@ -1,4 +1,3 @@
-import { yellow } from "@mui/material/colors";
 import React from "react";
 import { Container, Button } from "react-bootstrap";
 
@@ -9,7 +8,7 @@ const CTA1Section = () => {
         backgroundColor: "#FFBE02",
         color: "white",
         padding: "80px 20px",
-        textAlign: "center", // Center align text
+        textAlign: "center",
         width: "100vw",
         margin: "0",
         borderRadius: "0",
@@ -36,7 +35,7 @@ const CTA1Section = () => {
         >
           Our mission is to promote world-class, cutting-edge research,
           facilitate interdisciplinary collaboration, and nurture the next
-          generation of researchers and innovators
+          generation of researchers and innovators.
         </p>
         <Button
           variant="light"
@@ -46,6 +45,7 @@ const CTA1Section = () => {
             padding: "10px 20px",
             borderRadius: "50px",
           }}
+          href="mailto:info@rsalabs.co?subject=Schedule%20a%20Meeting&body=Hello,%20I%20would%20like%20to%20schedule%20a%20meeting%20to%20discuss..."
         >
           Schedule A Meeting
         </Button>

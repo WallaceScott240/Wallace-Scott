@@ -1,35 +1,38 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import CTA1Section from "./Cta";
 
 function CardSection() {
+  const navigate = useNavigate(); // Hook for navigation
+
   const cardData = [
     {
       image:
         "https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "Publications",
       text: "Assistance with research papers, essays, theses, and dissertations",
-      link: "#",
+      link: "/key-services",
     },
     {
       image:
         "https://images.pexels.com/photos/1139319/pexels-photo-1139319.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "Patents",
       text: "Enable Patent application preparation, filing, publication and granting.",
-      link: "#",
+      link: "/key-services",
     },
     {
       image:
         "https://images.pexels.com/photos/7516347/pexels-photo-7516347.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "Collaborations",
       text: "Promote, and review progress on research collaborations",
-      link: "#",
+      link: "/key-services",
     },
     {
       image:
         "https://images.pexels.com/photos/6147148/pexels-photo-6147148.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "Research Grants",
       text: "Assistance in applying for research grants, mentorship programmes",
-      link: "#",
+      link: "/key-services",
     },
   ];
 
@@ -87,17 +90,20 @@ function CardSection() {
                 <Card.Text style={{ fontSize: "0.95rem", color: "#777" }}>
                   {card.text}
                 </Card.Text>
-                <a
-                  href={card.link}
+                <button
+                  onClick={() => navigate(card.link)}
                   style={{
-                    color: "#888",
+                    background: "none",
+                    border: "none",
+                    color: "grey",
                     textDecoration: "none",
                     fontSize: "0.9rem",
                     marginTop: "auto",
+                    cursor: "pointer",
                   }}
                 >
                   Learn More →
-                </a>
+                </button>
               </Card.Body>
             </Card>
           </Col>

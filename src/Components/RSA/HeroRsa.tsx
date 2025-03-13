@@ -2,6 +2,16 @@ import React from "react";
 import { Container, Button, Row, Col, Carousel } from "react-bootstrap";
 
 const HeroRSASection = () => {
+  const scrollToSection = () => {
+    const targetSection = document.getElementById("target-section");
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div
       style={{
@@ -17,7 +27,7 @@ const HeroRSASection = () => {
           position: "absolute",
           top: "50%",
           left: "50%",
-          transform: "translate(-50%, -50%)", // Centers both vertically & horizontally
+          transform: "translate(-50%, -50%)",
           width: "100%",
           textAlign: "center",
           color: "white",
@@ -28,7 +38,6 @@ const HeroRSASection = () => {
         <Container>
           <Row className="justify-content-center">
             <Col lg={8} md={10} sm={12}>
-              {/* Responsive Heading */}
               <h1
                 style={{
                   fontSize: "clamp(2rem, 4vw, 3.5rem)",
@@ -36,7 +45,6 @@ const HeroRSASection = () => {
                   textTransform: "uppercase",
                   fontFamily: "'Inter', sans-serif",
                   lineHeight: "1.2",
-
                 }}
               >
                 <span
@@ -60,12 +68,11 @@ const HeroRSASection = () => {
                 </span>
               </h1>
 
-              {/* Responsive Paragraph */}
               <p
                 style={{
                   fontSize: "clamp(1rem, 1.8vw, 1.2rem)",
                   maxWidth: "750px",
-                  margin: "0 auto", // Centers the text block
+                  margin: "0 auto",
                   color: "black",
                   lineHeight: "1.6",
                 }}
@@ -76,7 +83,6 @@ const HeroRSASection = () => {
                 journals.
               </p>
 
-              {/* Centered Button */}
               <Button
                 variant="light"
                 style={{
@@ -85,6 +91,7 @@ const HeroRSASection = () => {
                   padding: "10px 20px",
                   borderRadius: "50px",
                 }}
+                onClick={scrollToSection}
               >
                 Get Started
               </Button>
@@ -117,6 +124,20 @@ const HeroRSASection = () => {
           )
         )}
       </Carousel>
+
+      {/* Target Section for Scrolling */}
+      <div
+        id="target-section"
+        style={{
+          height: "100vh",
+          backgroundColor: "#f8f9fa",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <h2>Welcome to the next section!</h2>
+      </div>
     </div>
   );
 };

@@ -3,6 +3,13 @@ import { Container, Button } from "react-bootstrap";
 import { BsChevronDown } from "react-icons/bs";
 
 const HeroSectionRSAabout = () => {
+  const handleScroll = () => {
+    window.scrollTo({
+      top: window.innerHeight, // Scrolls down by one full viewport height
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div
       style={{
@@ -38,6 +45,7 @@ const HeroSectionRSAabout = () => {
         </p>
         <Button
           variant="light"
+          onClick={handleScroll}
           style={{
             fontSize: "clamp(0.9rem, 1.5vw, 1.2rem)",
             padding: "10px 20px",

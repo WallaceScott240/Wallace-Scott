@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 const ContactSectionRSA = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -11,7 +12,25 @@ const ContactSectionRSA = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    // Validate Form
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    // Create Email Body
+    const emailSubject = encodeURIComponent("Contact Form Inquiry");
+    const emailBody = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`
+    );
+
+    // Send Email via `mailto:`
+    window.location.href = `mailto:info@rsalabs.co?subject=${emailSubject}&body=${emailBody}`;
+
+    // Reset Form & Show Success Message
+    setFormData({ name: "", email: "", message: "" });
+    setSubmitted(true);
   };
 
   return (
@@ -29,6 +48,13 @@ const ContactSectionRSA = () => {
         <p style={{ fontSize: "1.2rem", opacity: 0.8, marginBottom: "40px", color: "#555" }}>
           We’d love to hear from you! Fill out the form below and we’ll get back to you soon.
         </p>
+
+        {/* Success Message */}
+        {submitted && (
+          <Alert variant="success" onClose={() => setSubmitted(false)} dismissible>
+            Your message has been sent successfully!
+          </Alert>
+        )}
 
         {/* Contact Form */}
         <motion.div
