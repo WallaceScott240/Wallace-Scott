@@ -9,6 +9,12 @@ import Research from "./Components/RSA/About us/ResearchPage";
 import Patent from "./Components/RSA/About us/PatentPage";
 import ScrollToTop from "./scrolltop"; // Import the ScrollToTop component
 import RapterPage from "./Components/RSA/About us/rapterPage";
+import Portfolio from "./Components/RSA/About us/PortfolioPage";
+import WorkInProgress from "./Components/RSA/About us/Error";
+import NotFoundPage from "./Components/RSA/About us/Error";
+import Partners from "./Components/RSA/About us/PartnersPage";
+import Collabs from "./Components/RSA/About us/CollabsPage";
+import BlogPage from "./Components/RSA/About us/Blogpage";
 
 const App: React.FC = () => {
   return (
@@ -23,6 +29,11 @@ const App: React.FC = () => {
         <Route path="/research-publication" element={<Research />} />
         <Route path="/ipr-patent" element={<Patent />} />
         <Route path="/rapter" element={<RapterPage />} />
+        <Route path="/portfolio" element={<NotFoundPage />} />
+        <Route path="/partnerships" element={<Partners />} />
+        <Route path="/collaborations" element={<Collabs />} />
+        <Route path="/resources" element={<NotFoundPage />} />
+        <Route path="/blogs" element={<BlogPage />} />
       </Routes>
     </Router>
   );
