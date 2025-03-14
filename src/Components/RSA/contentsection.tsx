@@ -21,7 +21,7 @@ const ContentSection = () => {
         }}
       >
         <div className="text-white" style={{ fontSize: "14px", flex: 1 }}>
-          Driving innovation through research, collaboration, and technology.
+          Driving innovation through research, collaboration, and technology
         </div>
         <Button
           variant="light"
