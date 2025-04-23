@@ -10,6 +10,7 @@ import UIUX from "./Components/images/UI/UX.png";
 import figma from "./Components/images/figma.png";
 import tredimg from "./Components/images/3Dart.png";
 import WorkExperience from "./Components/workExp";
+import TryHackMeProfile from "./THM";
 
 function About() {
   const imageStyle = {
@@ -18,7 +19,7 @@ function About() {
     boxShadow: "0px 0px 25px -5px rgba(255,255,255,0.20)",
   };
   const aboutStyle = {
-    backgroundColor: "#355E93",
+    backgroundColor: "#013220",
     // borderRadius: "5px",
     padding: "30px",
     margin: "0px",
@@ -84,6 +85,7 @@ function About() {
           </Row>
         </Container>
       </div>
+     
       <div style={skillsStyle}>
         <Container>
           <Row className="text-center ">
@@ -96,10 +98,16 @@ function About() {
           </Row>
         </Container>
       </div>
+      <div>
+      <TryHackMeProfile></TryHackMeProfile>
+
+      </div>
+      <div style={{height: 50}}> </div>
 
       <div>
         <WorkExperience></WorkExperience>
       </div>
+
     </>
   );
 }

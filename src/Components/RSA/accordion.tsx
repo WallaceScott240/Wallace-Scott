@@ -3,30 +3,29 @@ import { Container } from "react-bootstrap";
 
 const accordionItems = [
   {
-    title: "Publications",
-    color: "#FF7100  ",
-    content: "Get published in top journals with expert support.",
+    title: "Strategy",
+    color: "#004225",
+    content: "I approach problems with a future-focused mindset—aligning technology, business goals, and innovation to create effective long-term solutions.",
   },
   {
-    title: "Patents",
-    color: "#44A659",
-    content:
-      "Protect your ideas with seamless patent filing.",
+    title: "Leadership",
+    color: "#40481C",
+    content: "I lead by example, fostering collaboration and motivating teams to deliver with excellence, whether it's a startup project or a cybersecurity initiative.",
   },
   {
-    title: "Collaboration",
-    color: "#008CFF ",
-    content: "Connect with experts to drive innovation.",
+    title: "Communication",
+    color: "#804D13",
+    content: "From writing technical documentation to presenting complex ideas clearly, I bridge gaps between developers, stakeholders, and end users.",
   },
   {
-    title: "Technology",
-    color: "#FF3363 ",
-    content: "Use AI and blockchain for secure research.",
+    title: "Problem-Solving",
+    color: "#BF5309",
+    content: "I thrive in high-pressure environments—analyzing situations quickly and delivering practical, tech-driven solutions that make an impact.",
   },
   {
-    title: "Mentorship",
-    color: "#4A4A4A ",
-    content: "Learn from industry and academic leaders.",
+    title: "Adaptability",
+    color: "#FF5800",
+    content: "In a fast-evolving tech landscape, I stay agile—learning, pivoting, and innovating across domains like AI, cybersecurity, and software development.",
   },
 ];
 
@@ -42,32 +41,10 @@ const AccordionSection = () => {
 
   return (
     <section
-      style={{ background: "#F8F9FA", padding: "60px 0", textAlign: "center" }}
+      style={{ background: "white", padding: "60px 0", textAlign: "center" }}
     >
       <Container>
-        <h2
-          style={{
-            fontSize: "2.5rem",
-            fontWeight: "bold",
-            marginBottom: "20px",
-            color: "#333",
-          }}
-        >
-          Empowering Innovation & Research 
-        </h2>
-        <p
-          style={{
-            fontSize: "1.2rem",
-            opacity: 0.9,
-            maxWidth: "800px",
-            margin: "0 auto 40px",
-          }}
-        >
-          We help researchers and innovators publish, patent, and protect their
-          ideas. From academic journals to intellectual property, we make the
-          process seamless. Your innovation deserves recognition—let’s make it
-          happen!
-        </p>
+        
 
         <div
           style={{
@@ -91,7 +68,7 @@ const AccordionSection = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 color: "white",
-                fontWeight: "bold",
+                fontWeight: "200",
                 fontSize: "1.5rem",
                 backgroundColor: item.color,
                 padding: activeIndex === index ? "20px" : "0",
@@ -109,7 +86,7 @@ const AccordionSection = () => {
             >
               {activeIndex === index ? (
                 <div>
-                  <h2 style={{ margin: "0", fontSize: "2rem" }}>
+                  <h2 style={{ margin: "0", fontSize: "2rem", fontWeight: "200" }}>
                     {item.title}
                   </h2>
                   <p

@@ -29,7 +29,7 @@ const MyNavbar = () => {
         {/* Logo and Brand */}
         <Navbar.Brand as={Link} to="/" className="fw-bold text-dark" onClick={closeNavbar}>
           <div style={styles.logoBox}>
-            <img src="/assets/RSA.png" alt="RSA Logo" style={styles.logoImage} />
+            <h2 className=" display-12 ">Wallace Scott</h2>
           </div>
         </Navbar.Brand>
 

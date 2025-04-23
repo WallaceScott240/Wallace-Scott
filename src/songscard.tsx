@@ -19,6 +19,8 @@ const RecentSongsSection = () => {
 
   return (
     <div style={aboutStyle}>
+      <div style={{height: 50}}> </div>
+
       <Container>
         <Row className="justify-content-center align-items-center">
           <Col xs={12} md={8}>

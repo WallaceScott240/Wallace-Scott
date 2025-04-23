@@ -65,8 +65,8 @@ function WorkExperience() {
         
         <div
           style={{
-            backgroundColor: "#355E93",
-            boxShadow: "0px 0px 1.5px 0px #355E93",
+            backgroundColor: "#013220",
+            boxShadow: "0px 0px 1.5px 0px #013220",
             
 
             borderRadius: "10px",

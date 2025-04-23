@@ -9,30 +9,30 @@ function CardSection() {
     {
       image:
         "https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "Publications",
+      title: "Pritesh",
       text: "Assistance with research papers, essays, theses, and dissertations",
-      link: "/key-services",
+      link: "/research-publication",
     },
     {
       image:
         "https://images.pexels.com/photos/1139319/pexels-photo-1139319.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "Patents",
       text: "Enable Patent application preparation, filing, publication and granting.",
-      link: "/key-services",
+      link: "/ipr-patent",
     },
     {
       image:
         "https://images.pexels.com/photos/7516347/pexels-photo-7516347.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "Collaborations",
       text: "Promote, and review progress on research collaborations",
-      link: "/key-services",
+      link: "/collaborations",
     },
     {
       image:
         "https://images.pexels.com/photos/6147148/pexels-photo-6147148.jpeg?auto=compress&cs=tinysrgb&w=600",
       title: "Research Grants",
       text: "Assistance in applying for research grants, mentorship programmes",
-      link: "/key-services",
+      link: "/research-publication",
     },
   ];
 

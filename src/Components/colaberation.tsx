@@ -3,7 +3,7 @@ import { Container, Button } from "react-bootstrap";
 
 const CTASection = () => {
   const gradientStyle = {
-    background: "linear-gradient(45deg, #355E93, #355E93)",
+    background: "linear-gradient(45deg, #013220, #004225)",
     color: "white",
     padding: "60px 20px",
     margin: 0,
@@ -27,7 +27,6 @@ const CTASection = () => {
         <h2 className="display-1 mb-4" style={titleStyle}>
           Ready to start your next project? Contact me for a consultation.
         </h2>
-        <p className="lead mb-4">Join me now and enjoy an additional 5% off.</p>
         <Button
           variant="outline-warning"
           size="lg"

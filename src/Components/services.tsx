@@ -10,7 +10,7 @@ import {
 
 const ServicesSection = () => {
   const sectionStyle = {
-    background: "linear-gradient(45deg, #000000, #14213d, #fca311)",
+    background: "linear-gradient(45deg, #000000, #004225)",
     padding: "60px 20px",
     margin: 0,
     color: "white",
