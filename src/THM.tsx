@@ -7,9 +7,10 @@ const TryHackMeProfile = () => {
         <div style={styles.textSection}>
           <h2 style={styles.heading}>TryHackMe Progress</h2>
           <p style={styles.paragraph}>
-            I’m actively learning through TryHackMe, exploring hands-on labs in cybersecurity. 
-            My profile highlights progress in topics such as penetration testing, networking, 
-            and ethical hacking. I’ve completed learning paths and earned badges along the way.
+            I’m actively learning through TryHackMe, exploring hands-on labs in
+            cybersecurity. My profile highlights progress in topics such as
+            penetration testing, networking, and ethical hacking. I’ve completed
+            learning paths and earned badges along the way.
           </p>
         </div>
         <div style={styles.badgeCard}>
@@ -20,11 +21,30 @@ const TryHackMeProfile = () => {
           ></iframe>
         </div>
       </div>
+
+      {/* Responsive Styles */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            div[style*="tryhackme-container"] {
+              flex-direction: column !important;
+              align-items: flex-start !important;
+            }
+
+            div[style*="tryhackme-badge"] {
+              width: 100% !important;
+              max-width: 100% !important;
+              height: 89px !important;
+              margin-top: 20px !important;
+            }
+          }
+        `}
+      </style>
     </section>
   );
 };
 
-const styles = {
+const styles: { [key: string]: React.CSSProperties } = {
   section: {
     backgroundColor: "#f5f7fa",
     padding: "40px 20px",
@@ -36,9 +56,11 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     gap: "30px",
+    flexWrap: "wrap" as const,
   },
   textSection: {
     flex: "1 1 400px",
+    minWidth: "300px",
   },
   heading: {
     fontSize: "2rem",
