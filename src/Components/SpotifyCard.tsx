@@ -1,23 +1,40 @@
 import React from "react";
 
 const SpotifyEmbed = () => {
-  const embedCode =
-    "https://open.spotify.com/embed/playlist/0NwJFESUw55gLFQI6c17j0?utm_source=generator"; // Replace with your Spotify embed code
+  const embedUrl =
+    "https://open.spotify.com/embed/playlist/0NwJFESUw55gLFQI6c17j0?utm_source=generator";
 
   return (
-    <div style={{ maxWidth: "300px", margin: "auto", borderRadius: "12px" }}>
-      <iframe
-        title="Spotify Embed"
-        src={embedCode}
-        width="100%"
-        height="152"
-        frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        style={{ borderRadius: "12px" }}
-      ></iframe>
-    </div>
+    <section style={styles.section}>
+      <div style={styles.container}>
+        <iframe
+          title="Spotify Playlist Embed"
+          aria-label="Spotify Playlist Player"
+          src={embedUrl}
+          width="100%"
+          height="152"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          style={styles.iframe}
+        ></iframe>
+      </div>
+    </section>
   );
+};
+
+const styles: { [key: string]: React.CSSProperties } = {
+  section: {
+    padding: "20px",
+    backgroundColor: "#f5f7fa",
+  },
+
+  iframe: {
+    border: "none",
+    borderRadius: "12px",
+    width: "100%",
+    height: "100%",
+  },
 };
 
 export default SpotifyEmbed;

@@ -5,29 +5,37 @@ import SpotifyCard2 from "./Components/SpotifyCard2";
 import SpotifyCard3 from "./Components/SpotifyCard3";
 
 const RecentSongsSection = () => {
-  const aboutStyle = {
+  const sectionStyle = {
     backgroundColor: "whitesmoke",
-    borderRadius: "0px",
-    boxShadow: "0px 0px 1px -1px #EF2D56",
+    borderRadius: "8px",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
     color: "black",
     padding: "60px 20px",
   };
 
   const headingStyle = {
-    marginBottom: "20px", // Adjust margin for the heading
+    fontSize: "2.5rem", // Larger heading for better visibility
+    fontWeight: "bold",
+    marginBottom: "30px", // Adequate spacing below the heading
+  };
+
+  const descriptionStyle = {
+    fontSize: "1.125rem",
+    lineHeight: "1.6",
+    marginBottom: "40px", // Increased margin for better readability
+  };
+
+  const cardSpacing = {
+    marginBottom: "30px", // Consistent spacing between the cards
   };
 
   return (
-    <div style={aboutStyle}>
-      <div style={{height: 50}}> </div>
-
+    <div style={sectionStyle}>
       <Container>
         <Row className="justify-content-center align-items-center">
           <Col xs={12} md={8}>
-            <h1 className="lg" style={headingStyle}>
-              In My Free Time...
-            </h1>
-            <p className="lead">
+            <h1 style={headingStyle}>In My Free Time...</h1>
+            <p style={descriptionStyle}>
               In my free time, I immerse myself in the art of curating music
               playlists, a passion that allows me to craft sonic journeys. Three
               of my carefully curated playlists are showcased on this website,
@@ -37,21 +45,18 @@ const RecentSongsSection = () => {
               new tracks or revisiting classics, my free time is a symphony of
               curated sounds.
             </p>
-            <Row className="SizedBox" style={{ height: 25 }}></Row>
           </Col>
+        </Row>
 
-          <Col>
-            <Row>
-              <SpotifyCard></SpotifyCard>
-            </Row>
-            <Row className="SizedBox" style={{ height: 25 }}></Row>
-            <Row>
-              <SpotifyCard2></SpotifyCard2>
-            </Row>
-            <Row className="SizedBox" style={{ height: 25 }}></Row>
-            <Row>
-              <SpotifyCard3></SpotifyCard3>
-            </Row>
+        <Row className="justify-content-center">
+          <Col xs={12} md={4} style={cardSpacing}>
+            <SpotifyCard />
+          </Col>
+          <Col xs={12} md={4} style={cardSpacing}>
+            <SpotifyCard2 />
+          </Col>
+          <Col xs={12} md={4} style={cardSpacing}>
+            <SpotifyCard3 />
           </Col>
         </Row>
       </Container>
