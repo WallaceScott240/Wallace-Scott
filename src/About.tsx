@@ -11,6 +11,7 @@ import figma from "./Components/images/figma.png";
 import tredimg from "./Components/images/3Dart.png";
 import WorkExperience from "./Components/workExp";
 import TryHackMeProfile from "./THM";
+import SpiderChartSection from "./Chart";
 
 function About() {
   const imageStyle = {
@@ -97,6 +98,9 @@ function About() {
             ))}
           </Row>
         </Container>
+      </div>
+      <div>
+      <SpiderChartSection></SpiderChartSection>
       </div>
       <div>
       <TryHackMeProfile></TryHackMeProfile>

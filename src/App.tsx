@@ -9,6 +9,7 @@ import RecentSongsSection from "./songscard";
 import InformativeFooter from "./footer";
 import FooterSection from "./Components/RSA/About us/FootSec";
 import FooterRSA from "./Components/RSA/Foot";
+import SpiderChartSection from "./Chart";
 
 const App: React.FC = () => {
   return (
