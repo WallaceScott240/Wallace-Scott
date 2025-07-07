@@ -117,7 +117,7 @@ function HeroSection() {
           <Row className="justify-content-center text-center">
             <Col xs={12} md={8} style={contentStyle}>
               <h1 className="display-1" style={{ color: "white" }}>
-                Wallace Scott.
+                Wallace Dsouza.
               </h1>
               <hr className="my-4" style={{ borderColor: "white" }} />
               <p className="mb-4 mt-3" style={{ color: "white" }}>
